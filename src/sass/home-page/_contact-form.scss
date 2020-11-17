@@ -1,0 +1,142 @@
+.contact-mp-form{
+    padding: 60px 0 60px 0;
+    background-image: url("../img/main-page/sec-contact/contact-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //opacity: 0.9;
+        
+}
+.mp-form-wrapper{
+    background: $standart_white;
+    max-width: 960px;
+    margin: auto;
+    border-radius: 2px;
+    padding: 66px 115px 59px 115px;
+    position: relative;
+}
+
+
+
+.inline-inputs-wrapper{
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.data-form-input{
+    width: calc((100% - 30px) / 2);
+    background-color: transparent;
+    margin-bottom: 35px;
+    
+}
+
+.data-form-input span{
+    display: block;
+
+}
+.data-form-input input{
+    height: 62px;
+    
+}
+.input100{
+    display: block;
+    width: 100%;
+    background: #f2f2f2;
+    border-radius: 2px;
+    border: none;
+    font-size: 20px;
+    color: #686868;
+    line-height: 1.2;
+    padding: 0 28px;
+    
+    margin-top: 10px;
+}
+
+.contact-form-title {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: left;
+    padding-bottom: 32px;
+}
+.label-input-form{
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.data-form-input-msg{
+    background-color: transparent;
+    margin-bottom: 35px;
+}
+
+textarea.input100 {
+    min-height: 162px;
+    padding-top: 19px;
+    padding-bottom: 13px;
+}
+
+@media (max-width: 1199px){
+    .mp-form-wrapper {
+        max-width: 750px;
+        padding: 33px 57px 29px 57px;
+    }
+    .contact-form-title {
+        font-size: 27px;
+        line-height: 3.2;
+        padding-bottom: 1px;
+    }
+    .input100{
+       font-size: 18px; 
+    }
+    textarea.input100 {
+        min-height: 130px;
+    }
+   
+}
+@media (max-width: 991px){
+    .contact-form-title {
+        font-size: 21px;
+    }
+    .data-form-input input {
+        height: 43px;
+    }
+    .input100{
+        font-size: 16px; 
+        padding: 0 12px
+     }
+     .inline-inputs-wrapper {  
+        margin-bottom: 0px;
+     }
+}
+@media (max-width: 767px){
+    .contact-form-title {
+        font-size: 16px;
+    }
+    .data-form-input input {
+        height: 43px;
+    }
+    .input100{
+        font-size: 14px; 
+        padding: 0 12px
+     }
+     .inline-inputs-wrapper {  
+        margin-bottom: 0px;
+        display: block;
+     }
+     .data-form-input {
+        margin-bottom: 26px;
+        width: 100%;
+     }
+     .label-input-form {
+        font-size: 13px;
+    }
+    textarea.input100 {
+        min-height: 105px;
+    }
+}

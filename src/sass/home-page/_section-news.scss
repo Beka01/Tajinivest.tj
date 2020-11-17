@@ -1,0 +1,107 @@
+.news-mp {
+    background-color: $section_news_background;
+    padding-bottom: 30px;
+    
+}
+
+
+
+.section-mp-header{
+    padding-top: 60px;
+    text-align: center;
+    
+    span {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 400;
+        color: $txt_color_dark;
+    }
+}
+.sec-mp-header-logo {
+    width: 40px;
+    height: 46px;
+    margin: auto;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      height: 100%; 
+      object-fit: cover; 
+    }
+    
+}
+
+//CARD
+  .grid-mp-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .grid-mp-news > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    em{
+        display: block;
+        border-bottom: 1px solid $color_grey;
+        font-size: 13px;
+        color: $color_grey_dark;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        
+    }
+    a{
+        &:hover{
+            text-decoration-color: $txt_color_blue;
+        }
+    }
+   
+  }
+  
+  .grid-mp-news > article img {
+    max-width: 100%;
+  }
+  
+  .grid-mp-news .card-news-title {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    span {
+    text-transform: uppercase;
+    color: $txt_color_blue;
+    font-weight: 500;
+    font-size: 14px;
+    }
+    
+  }
+
+  // ALL NEWS BTN
+  .all-news-btn{
+    position: relative;
+    width: 190px;
+    height: 33px;
+    background-color: $search_btn_color;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 6px;
+    
+    &:hover{
+        background-color: $search_btn_hover;
+    }
+    a{
+        
+        position: absolute;
+        display: block;
+        text-align:center;
+        width: 100%;
+        height: 100%;
+        color: $standart_white;
+        text-transform: uppercase;
+        margin: 0;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+  

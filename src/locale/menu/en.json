@@ -1,0 +1,36 @@
+[
+    {
+        "url":"main.html",
+        "name":"home"
+    },
+
+    {
+        "url":"news.html",
+        "name":"news"
+    },
+
+    {
+        "url":"companies.html",
+        "name":"companies"
+    },
+
+    {
+        "url":"investmentprojects.html",
+        "name":"investment projects"
+    },
+
+    {
+        "url":"businessguide.html",
+        "name":"business guide"
+    },
+
+    {
+        "url":"articles.html",
+        "name":"articles"
+    },
+
+    {
+        "url":"contacts.html",
+        "name":"contacts"
+    }
+]

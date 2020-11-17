@@ -1,0 +1,135 @@
+nav{
+    background-color: $standart_black;
+    opacity: 0.8;
+    height: 60px;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    z-index: 5;
+   
+}
+
+.menu-mp-link{
+    position: relative;
+    cursor: pointer;
+    &:after {
+        position: absolute;
+        content: "";
+        top: 140%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $standart_white;
+        transform: scaleX(0);
+        transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+}
+.menu-mp{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 13px 70px;
+    text-align: center;
+    //position: absolute;
+    
+}
+.item-mp-link{
+    color: $standart_white;
+    font-size: 14px;
+    font-weight: 600;
+    //padding-right:20px;
+    &:hover{
+        color: $standart_white;
+        text-decoration: none;
+    }
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.menu-mp:hover .menu-mp-link:not(:hover) a {
+  opacity: 0.2;
+}
+
+.menu-mp .menu-mp-link:hover::after, .menu-mp .menu-mp-link.active::after {
+  transform: scaleX(1);
+}
+
+.sticky {
+  position: fixed;
+  top: -30px;
+  width: 100%;
+  opacity: 1;
+}
+
+//MEDIA
+
+@media (max-width: 1199px){
+  .item-mp-link{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px){
+  
+.item-mp-link {
+  font-size: 10px;
+} 
+}
+
+@media (max-width: 767px) {
+  nav{
+    background: none;
+    height: 0;
+  }
+  .menu-mp {
+    position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+		top: 0;
+		right: -100%;
+		width: 50%;
+		height: 100%;
+		padding: 20px 15px;
+    background-color: rgba(0,0,0, .9);
+    transition: 0.7s all
+  }
+  .menu-mp_active {
+    right: 0;
+  }
+
+  .sticky {
+    opacity: 0.8;
+  }
+  
+
+  .menu-mp-link{
+    padding-right: 0;
+    border: 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
+    &:after {
+      position: absolute;
+      content: "";
+      top: 70%;
+      left: 0;
+      width: 60%;
+      height: 2px;
+      background: $standart_white;
+      transform: scaleX(0);
+      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+  }
+  .item-mp-link{
+    font-size: 15px;
+  }
+
+  
+  
+}
+
+

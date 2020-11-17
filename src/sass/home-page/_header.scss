@@ -1,0 +1,104 @@
+.header{
+    background-color: $standart_black;
+    //opacity: 0.5;
+}
+.header-wrapper{
+    display: flex;
+    height: 50px;
+    
+}
+.contacts-info{
+    display: flex;
+    color: $standart_white;
+    font-size: 12px;
+    margin: auto;
+    width: 100%;
+    
+}
+.contacts-wrapper{
+    display: flex;
+    padding-right: 15px;
+}
+.sign-wrapper{
+    display: flex;
+    padding-right: 15px;
+}
+.contacts-icon{
+    padding-right: 10px;
+    color: $standart_white;
+    font-size: 12px;
+}
+.header-text{
+        color: white;
+        font-size: 12px;
+        &:hover{
+            color: $standart_white;
+        }
+}
+
+.lang-info{
+    display: flex;
+    margin: auto;
+    
+}
+
+.lang-choose{
+    display: flex;
+    margin: auto;
+}
+
+.lang-mp-icon{
+    position: relative;
+    width: 18px;
+    height: 14px;
+    margin-right: 12px;
+   
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+}
+.hamburger {
+    display: none;
+}
+@media (max-width: 767px) {
+    .contacts-wrapper {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        //margin-top: 10px;
+        transform: translateY(-50%);
+        padding-top: 12px;
+        width: 30px;
+        height: 21px;
+        span {
+            transition: 0.5s all;
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+    }  
+    .hamburger_active{
+        margin-top: 10px;
+
+        span {
+            margin-bottom: -2px;
+            &:nth-child(1){
+                transform: translateY(3px) rotate(-45deg)
+            }
+            &:nth-child(2){
+                display: none;
+            }
+            &:nth-child(3){
+                transform: translateY(3px) rotate(45deg)
+            }
+        }
+    }
+}

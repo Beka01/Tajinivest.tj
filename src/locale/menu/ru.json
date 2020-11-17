@@ -1,0 +1,36 @@
+[
+    {
+        "url":"main.html",
+        "name":"главная"
+    },
+
+    {
+        "url":"news.html",
+        "name":"новости"
+    },
+
+    {
+        "url":"companies.html",
+        "name":"компании"
+    },
+
+    {
+        "url":"investmentprojects.html",
+        "name":"инвестиционные проекты"
+    },
+
+    {
+        "url":"businessguide.html",
+        "name":"бизнес путеводитель"
+    },
+
+    {
+        "url":"articles.html",
+        "name":"статьи"
+    },
+
+    {
+        "url":"contacts.html",
+        "name":"контакты"
+    }
+]

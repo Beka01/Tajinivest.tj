@@ -1,0 +1,240 @@
+.footer_top {
+    padding: 35px 0;
+    background-color: #111111;
+}
+.footer_logo{
+    height: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+.footer_logo img{
+    vertical-align: middle;
+    //border-style: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.seprator {
+    margin: 10px 0;
+}
+.seperator-logo{
+    margin-top: 15px;
+    border-top: 1px solid #efefef;
+}
+
+.follow_title {
+    color: $color_grey;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    
+    margin-top: 15px;
+}
+.footer_social_icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.footer_social_icons li {
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.footer_social_icons li a {
+    color: $color_grey;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.footer_social_icons li a:hover {
+    color: $color_grey;
+    text-decoration: underline;
+}
+.footer_second_widget{
+    padding-left: 88px;
+}
+.footer_title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color_grey;
+    margin-bottom: 20px;
+}
+.footer_title span {
+    font-weight: 600;
+}
+.footer_lists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer_lists li {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.footer_lists li a {
+    color: $color_grey;
+}
+.footer_lists li a:hover {
+    color: $color_grey;
+    text-decoration: none;
+}
+.footer_lists_map {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+}
+.footer_lists_map li {
+    display: block;
+    margin-bottom: 5px;
+}
+.footer_lists_map li a {
+    color: $color_grey;
+}
+.footer_lists_map li a:hover {
+    color: $color_grey;
+    text-decoration: none;
+}
+footer .subscribe_box {
+    padding: 0;
+}
+.subscribe_box input[type="email"] {
+    border: 1px solid $color_grey_dark;
+    padding: 8px 13px;
+    background: #f9f9f9;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.subscribe_box p{
+    color: $color_grey;
+    font-size: 14px;
+}
+.input_wrap {
+    position: relative;
+}
+.input_wrap .fa {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: $color_grey_dark;
+}
+.btn-subscribe{
+    //color:red;
+    display: inline-block;
+    margin-bottom: 8px;
+    
+}
+
+.subscribe_box input[type="button"], .subscribe_box input[type="submit"] {
+    background: $txt_color_blue;
+    border: none;
+    padding: 10px 25px;
+    color: $color_grey;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+.footer_third_widget{
+   
+    padding-left: 50px;
+}
+.footer_copyright {
+    background-color: #111111;
+}
+
+.footer_copyright p {
+    border-top: 1px solid #efefef;
+}
+.copyright {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    color: $color_grey;
+}
+
+@media (max-width: 1199px){
+    .footer_title {
+        font-size: 17px;
+        
+    }
+}
+
+@media (max-width: 991px){
+    .footer_logo{
+        height: 100%;
+        width: 100%;
+    }
+    .footer_third_widget {
+        padding-left: 25px;
+    }
+    .footer_second_widget {
+        padding-left: 0px;
+    }
+    .footer_title {
+        font-size: 13px;
+    }
+    .footer_lists li {
+        font-size: 13px;
+    }
+    .footer_lists_map {
+        font-size: 13px;
+    }
+    .subscribe_box p {
+        font-size: 13px;
+    }
+    .follow_title {
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .subscribe_box input[type=email] {
+        border: 1px solid #a2a2a2;
+        padding: 5px 8px;
+        background: #f9f9f9;
+        font-weight: 500;
+        width: 100%;
+        margin-bottom: 17px;
+        font-size: 13px;
+    }
+    .input_wrap .fa {
+        font-size: 12px;
+        position: absolute;
+        top: 9px;
+        right: 10px;
+        color: $color_grey_dark;
+    }
+    .subscribe_box input[type=button], .subscribe_box input[type=submit] {
+        padding: 6px 25px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+    .footer_social_icons li {
+        font-size: 15px;
+       
+    }
+    @media (max-width: 767px){
+        .footer_logo {
+            height: 50%;
+            width: 50%;
+            margin: auto;
+        }
+        .footer_third_widget {
+            margin-top: 20px;
+            padding-left: 0px;
+            margin-bottom: 20px;
+        }
+        .footer_title {
+            margin-bottom: 7px;
+        }
+    }
+}

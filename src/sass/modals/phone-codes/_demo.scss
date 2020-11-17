@@ -1,0 +1,28 @@
+.input-tel-reg {
+  height: 37px;
+  width: 100%;
+  //margin: 0;
+  //margin-top: 5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  //font-family: inherit;
+  font-size: 100%;
+  //color: inherit; }
+  .input-tel-reg [disabled]{
+    background-color: #eee; 
+  }
+
+ .input-tel-reg, select {
+   border: 1px solid #CCC;
+   //width: 100%; 
+  }
+
+  
+}
+
+@media (max-width: 1199px){
+  .input-tel-reg {
+    height: 33px;
+    
+   }
+}

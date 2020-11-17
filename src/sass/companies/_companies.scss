@@ -1,0 +1,144 @@
+.ads-img {
+    width: 253px;
+    height: 548px;
+    margin-top: 40px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.filter-div {
+    display: flex;
+    width:100%;
+ }
+ .comp-filter-select{
+    width: 50%;
+    height: 35px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #555;
+ }
+ .comp-search-btn {
+    width: 15%;
+    border: 1px solid #396284;
+    color: #fff;
+    background-color: #396284;
+    &:focus {
+        outline: 0;
+    }
+}
+.profile-cp {
+    margin-top: 20px;
+    padding: 33px 33px 22px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.photo-profile {
+    display: block;
+    //width: 220px;
+    //width: 150px;
+    height: 150px;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    padding: 15px;
+    margin-bottom: 20px;
+    //position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        //position: absolute;
+    }
+}
+.info-profile {
+    h2{
+        color: $txt_color_blue;
+        font-size: 28px;
+    }
+}
+.load-wrapper {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.download-info {
+    margin-bottom: 25px;
+    padding: 17px 5px;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    transition: all .3s;
+    color: $txt_color_dark;
+
+    span {
+        padding-left: 8px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,.30), 0 0 12px rgba(0,0,0,.20);    
+    }
+}
+
+.available{
+    color: $txt_color_dark;
+    margin-bottom: 8px;
+    span {
+        font-size: 14px;
+        
+    }
+}
+.company-cp-descr{
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.comp-cp-contacts{
+    list-style: none;
+    
+}
+.li-contacts {
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+.comp-title-header {
+    display: block;
+    width: 80px;
+    color: $txt_color_dark;
+    
+}
+.li-social-links {
+    display: inline-block;
+    margin: 0 5px 12px;
+    
+    a {
+        border: 1px solid #757575;
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        transition: all .2s;
+        &:hover {
+            border-color:$search_btn_color;
+            box-shadow: 0 0 3px $search_btn_color;
+            background-color: $search_btn_color;
+
+            i {
+                color: white;
+            }
+        }
+        
+        i {
+            color: $txt_color_dark;
+        }
+
+    }
+}
+
+// PAGINATION STYLES
+.company-pagi {
+    margin-top: 30px;
+}
+

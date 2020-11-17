@@ -1,0 +1,365 @@
+.overlay-reg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, .56);
+  z-index: 5;
+}
+
+.modal-reg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  height: 95%;
+  background-color:white;
+  padding: 40px 80px 80px 80px;
+  //max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  //border-radius: 3px;
+  z-index: 15;
+}
+
+
+.modal-reg-wrapper{
+  position: relative;
+  width: 100%;
+}
+.captcha-reg{
+  margin-top: 30px;
+}
+.input-tel-reg {
+    width: 250px;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    
+  }
+  .input-tel-reg::placeholder {
+    color: #BBB;
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  #regcompform
+ {
+    display: none;
+}
+.modal-reg-header{
+  text-align: center;
+  h1 {
+    font-size: 25px;
+    font-weight: 400;
+  }
+  margin-bottom: 30px;
+}
+.modal-reg-btn {
+  position: relative;
+  width: 190px;
+  height: 45px;
+  background-color: $search_btn_color;
+  margin: auto;
+  margin-top: 20px;
+  //padding-top: 6px;
+  border:none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  &:hover{
+      background-color: $search_btn_hover;
+  }
+}
+.modal-reg-textarea{
+  border: 1px solid $color_grey;
+  border-radius: 5px;
+  margin-bottom: 15px;
+ 
+}
+.text-area-style {
+ margin: auto;
+ margin-top: 20px;
+ width: 95%
+}
+
+.checkbox-block{
+  margin-left: 25px;
+  font-size: 15px;
+}
+
+.chbx {
+  margin-right: 5px; 
+  
+}
+
+.form-group {
+  ::-webkit-input-placeholder {
+    font-size: 15px!important;
+    color: $color_grey_dark!important;
+    position: relative;
+    //margin-left: 10px;
+  }
+}
+
+
+.input-icon { 
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  //z-index: 2;
+  display: block;
+  width: 60px;
+  height: 55px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  pointer-events: none;
+  color: $color_grey_dark;
+  
+}
+
+.form-control:focus + .input-icon {
+  color:$search_btn_color;
+}
+
+.modal-reg-close{
+  position: absolute;
+    top: 5px;
+    right: 0px;
+    font-size: 50px;
+    line-height: 18px;
+    color: $search_btn_color;
+    cursor: pointer;
+}
+
+.reg-input[type=text] {
+  padding-left: 35px; //change it base on your desired output
+}
+.reg-input[type=phone] {
+  padding-left: 35px; //change it base on your desired output
+}
+
+.input-logo-file {
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0px;
+  height: 37px;
+  font-size: 15px;
+  cursor: pointer;
+  &[type=file]::-webkit-file-upload-button{
+    background-color:$search_btn_color;
+    border: 0;
+    border-radius: 2px;
+    color: white;
+    height: 100%;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+
+.reg-text-upload {
+  background-color: $search_btn_color;
+  color: $standart_white;
+  font-weight: 400;
+}
+
+
+.error {
+  margin-top: 0px;
+  border: 1px solid red;
+}
+
+label.error{
+  border: none;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: red;
+  font-weight: 300;
+  margin-left: 3px;
+}
+
+
+.modal-window {
+  position: fixed;
+  display: none;
+  //background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+  transition: all 0.3s;
+ 
+  &>div {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+  }
+  header {
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+}
+.modal-close {
+  color: #aaa;
+  line-height: 40px;
+  font-size: 20px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 38px;
+  text-decoration: none;
+  &:hover {
+    color: black;
+  }
+}
+
+//MEDIA
+@media (max-width: 1199px){
+  .custom-file-input:lang(en)~.custom-file-label::after {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .reg-text-upload {
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .form-control {
+    font-size: 13px;
+  }
+  .custom-file-label{
+    font-size: 13px;
+  }
+
+  .checkbox-block {
+    font-size: 13px;
+  }
+  .form-group {
+    ::-webkit-input-placeholder {
+      font-size: 13px!important;
+      color: $color_grey_dark!important;
+      position: relative;
+      //margin-left: 10px;
+    }
+  }
+  .modal-reg-btn {
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .input-icon { 
+    font-size: 18px;
+    line-height: 35px;
+  }
+  .captcha-reg{
+    width: 10%;
+  }
+}
+
+
+@media (max-width: 991px){
+  .captcha-reg{
+    margin-top: 20px;
+  }
+  .modal-reg {
+    padding: 40px 32px 80px 32px;
+  }
+
+  .modal-reg-header{
+    
+    h1 {
+      font-size: 23px;
+      font-weight: 400;
+    }
+    margin-bottom: 20px;
+  }
+  .modal-reg-close{
+      top: 7px;
+      right: 0;
+      font-size: 40px;
+      line-height: 10px;
+  }
+  .checkbox-block {
+    margin-left: 12px;
+  }
+  
+}
+
+
+@media (max-width: 767px){
+  .g-recaptcha {
+    transform:scale(0.60);
+    -webkit-transform:scale(0.60);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+  }
+  .captcha-reg{
+    margin-top: 10px;
+  }
+  .modal-reg-header{
+    h1 {
+      font-size: 20px;
+      font-weight: 400;
+    }
+    margin-bottom: 20px;
+  }
+  .modal-reg-close{
+      top: 7px;
+      right: 0;
+      font-size: 40px;
+      line-height: 10px;
+  }
+  .modal-reg {
+    padding: 40px 32px 80px 32px;
+  }
+  .modal-reg-btn {
+    width: 150px;
+    height: 30px;
+    font-size: 13px;
+    margin-top: 0px;
+  }
+  
+}
+@media (max-width: 575px){
+  .g-recaptcha {
+    transform:scale(0.50);
+    -webkit-transform:scale(0.50);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+  }
+
+  .modal-reg-header{
+    h1 {
+      font-size: 17px;
+      font-weight: 400;
+    }
+    margin-bottom: 20px;
+  }
+  .modal-reg-close{
+      top: 7px;
+      right: 0;
+      font-size: 40px;
+      line-height: 4px;
+  }
+  .modal-reg {
+    padding: 40px 20px 80px 20px;
+  }
+}
+
+

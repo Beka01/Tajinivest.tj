@@ -1,0 +1,44 @@
+.quotes-mp{
+    font-size: 100%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/sea.jpg) border-box  0 / cover;
+}
+.quotes-mp-wrapper{
+    padding: 20px;
+    
+}
+blockquote {
+    margin: auto;
+    padding: 12px;
+    background: linear-gradient(white, white) padding-box, url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/sea.jpg) border-box  0 / cover;
+    border: 40px solid transparent;
+    box-shadow: 5px 3px 30px black;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.5;
+    width: 70%;
+    text-align: center;
+  }
+  
+  footer {
+    padding-top: 28px;
+  }
+  
+  cite {
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 991px){
+    blockquote {
+      margin: 0;
+      width: 100%;
+      font-size: 18px;
+    }
+    cite {
+      font-size: 20px;
+    }
+}
+  
