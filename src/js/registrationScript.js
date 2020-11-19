@@ -221,13 +221,25 @@ $(document).ready(function () {
     if ($('#regcompform form').valid()) {
       // get user info from registration form
       console.log('validate');
-      const companyName = signupForm['regname'].value;
-      const companyAddress = signupForm['regaddress'].value;
+      // INPUT COMPANY NAME
+      const companyNameRu = signupForm['regname-ru'].value;
+      const companyNameEn = signupForm['regname-en'].value;
+      const companyNameTj = signupForm['regname-tj'].value;
+
+      // INPUT COMPANY ADDRESS
+      const companyAddressRu = signupForm['regaddress-ru'].value;
+      const companyAddressEn = signupForm['regaddress-en'].value;
+      const companyAddressTj = signupForm['regaddress-tj'].value;
+
       const companyCountry = signupForm['regcountry'].options[signupForm['regcountry'].selectedIndex].innerText;
       const companyCountryId = signupForm['regcountry'].value;
       const companyCity = signupForm['city-select'].value;
       const companyCityInput = signupForm['city-input'].value;
-      const companyDescr = signupForm['regcompdescr'].value;
+
+      // INPUT COMPANY DESCRIPTION
+      const companyDescrRu = signupForm['regcompdescr-ru'].value;
+      const companyDescrEn = signupForm['regcompdescr-en'].value;
+      const companyDescrTj = signupForm['regcompdescr-tj'].value;
       // const transToRuss = signupForm['trans-russia'].value;
       // const transToEng = signupForm['trans-english'].is(':checked');
       // const transToTaj = signupForm['trans-tajik'].value;
@@ -265,13 +277,19 @@ $(document).ready(function () {
       firebase.auth().createUserWithEmailAndPassword(email, password).then(cred => {
 
         firebase.firestore().doc(`users/${cred.user.uid}`).set({
-          companyName: companyName,
-          companyAddress: companyAddress,
+          companyNameRu: companyNameRu,
+          companyNameEn: companyNameEn,
+          companyNameTj: companyNameTj,
+          companyAddressRu: companyAddressRu,
+          companyAddressEn: companyAddressEn,
+          companyAddressTj: companyAddressTj,
           companyCountry: companyCountry,
           companyCountryId: companyCountryId,
           companyCity: companyCity,
           companyCityInput: companyCityInput,
-          companyDescr: companyDescr,
+          companyDescrRu: companyDescrRu,
+          companyDescrEn: companyDescrEn,
+          companyDescrTj: companyDescrTj,
           // transToRuss: transToRuss,
           // transToEng: transToEng,
           // transToTaj: transToTaj,
@@ -360,6 +378,22 @@ $(document).ready(function () {
     $(this).find('label.error').hide();
     $(".error").removeClass("error");
   });
+
+  checkBoxSwitcher();
+  // Check Box Hide/Show function
+  function checkBoxSwitcher(){
+    if(window.currentLocale == "ru"){
+      $("#chbox-tj").show();
+      $("#chbox-en").show();
+    } else if(window.currentLocale == "en") {
+      $("#chbox-tj").show();
+      $("#chbox-ru").show();
+    }else if(window.currentLocale == "tj") {
+      $("#chbox-en").show();
+      $("#chbox-ru").show();
+    }
+    
+  } 
 });
 
 

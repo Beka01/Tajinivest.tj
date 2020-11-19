@@ -67,23 +67,7 @@
 .footer_title span {
     font-weight: 600;
 }
-.footer_lists {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.footer_lists li {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-.footer_lists li a {
-    color: $color_grey;
-}
-.footer_lists li a:hover {
-    color: $color_grey;
-    text-decoration: none;
-}
+
 .footer_lists_map {
     margin: 0;
     padding: 0;
@@ -96,6 +80,7 @@
 }
 .footer_lists_map li a {
     color: $color_grey;
+    //text-transform: capitalize;
 }
 .footer_lists_map li a:hover {
     color: $color_grey;
@@ -180,9 +165,7 @@ footer .subscribe_box {
     .footer_title {
         font-size: 13px;
     }
-    .footer_lists li {
-        font-size: 13px;
-    }
+    
     .footer_lists_map {
         font-size: 13px;
     }

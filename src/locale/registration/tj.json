@@ -1,0 +1,76 @@
+{
+    "links":
+[
+    
+],
+"texts": {
+    
+},
+"attrs": [
+    {
+        "id": "regcompinsta",
+        "attr": "placeholder",
+        "value": "Инстаграм"
+    },
+    {
+        "id": "regcompfacebook",
+        "attr": "placeholder",
+        "value": "Фейсбук"
+    },
+    {
+        "id": "regcompfax",
+        "attr": "placeholder",
+        "value": "Факс"
+    },
+    {
+        "id": "regcompphone",
+        "attr": "placeholder",
+        "value": "Рақами телефони ширкат"
+    },
+    {
+        "id": "regcontname",
+        "attr": "placeholder",
+        "value": "Ному насаби шахси масъул"
+    },
+    {
+        "id": "regcompemail",
+        "attr": "placeholder",
+        "value": "Почтаи электронӣ"
+    },
+    {
+        "id": "regcomppass",
+        "attr": "placeholder",
+        "value": "Рамз"
+    },
+    {
+        "id": "regconfpass",
+        "attr": "placeholder",
+        "value": "Рамзро тасдиқ кунед"
+    },
+    {
+        "id": "regBtnSubmit",
+        "attr": "value",
+        "value": "Фиристодан"
+    },
+    {
+        "id": "logo_file",
+        "attr": "value",
+        "value": "Замимаи логотип"
+    },
+    {
+        "id": "trans-english",
+        "attr": "input",
+        "value": "Ба тарҷумаи англисӣ иҷозат медиҳам"
+    },
+    {
+        "id": "trans-russia",
+        "attr": "input",
+        "value": "Ба тарҷумаи русӣ иҷозат медиҳам"
+    },
+    {
+        "id": "trans-tajik",
+        "attr": "input",
+        "value": "Ба тарҷумаи тоҷикӣ ҷозат медиҳам"
+    }
+]
+}

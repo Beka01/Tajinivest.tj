@@ -1,0 +1,76 @@
+{
+    "links":
+[
+    
+],
+"texts": {
+    
+},
+"attrs": [
+    {
+        "id": "regcompinsta",
+        "attr": "placeholder",
+        "value": "Инстаграм"
+    },
+    {
+        "id": "regcompfacebook",
+        "attr": "placeholder",
+        "value": "Фейсбук"
+    },
+    {
+        "id": "regcompfax",
+        "attr": "placeholder",
+        "value": "Факс"
+    },
+    {
+        "id": "regcompphone",
+        "attr": "placeholder",
+        "value": "Рабочий телефон"
+    },
+    {
+        "id": "regcontname",
+        "attr": "placeholder",
+        "value": "ФИО контактного лица"
+    },
+    {
+        "id": "regcompemail",
+        "attr": "placeholder",
+        "value": "Почта"
+    },
+    {
+        "id": "regcomppass",
+        "attr": "placeholder",
+        "value": "Пароль"
+    },
+    {
+        "id": "regconfpass",
+        "attr": "placeholder",
+        "value": "Подтвердите пароль"
+    },
+    {
+        "id": "regBtnSubmit",
+        "attr": "value",
+        "value": "Отправить"
+    },
+    {
+        "id": "logo_file",
+        "attr": "value",
+        "value": "Загрузите логотип"
+    },
+    {
+        "id": "trans-english",
+        "attr": "input",
+        "value": "Разрешить перевод на английский"
+    },
+    {
+        "id": "trans-russia",
+        "attr": "input",
+        "value": "Разрешить перевод на русский"
+    },
+    {
+        "id": "trans-tajik",
+        "attr": "input",
+        "value": "Разрешить перевод на таджикский"
+    }
+]
+}

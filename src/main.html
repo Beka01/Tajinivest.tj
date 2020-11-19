@@ -41,12 +41,12 @@
 							<div class="contacts-icon">
 								<i class="fa fa-sign-in"></i> 
 							</div> 
-							<a class="header-text" href="#">Войти</a> 
+							<a class="header-text" id="logintop" href="#">Войти</a> 
 						</div>
 						<div class="lang-choose">
-							<a class="lang-mp-icon" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
-							<a class="lang-mp-icon" href="#"> <img src="img/main-page/en.png" alt=""> </a>
-							<a class="lang-mp-icon" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
+							<a class="lang-mp-icon" data-lang="tj" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
+							<a class="lang-mp-icon" data-lang="en" href="#"> <img src="img/main-page/en.png" alt=""> </a>
+							<a class="lang-mp-icon" data-lang="ru" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
 						</div>
 					</div>
 				</div>
@@ -363,7 +363,7 @@
 
 					</div>
 					<div class="footer_follow">
-					   <h4 class="follow_title">Подписки</h4>
+					   <h4 id="subs-text" class="follow_title">Подписки</h4>
 					   <ul class="footer_social_icons">
 						  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -374,31 +374,31 @@
 			  </div>
 			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
 				 <div class="footer_second_widget">
-					<h3 class="footer_title">О портале <span>B2B</span></h3>
-					<ul class="footer_lists">
-					   <li><a href="#">ЧАВО</a></li>
-					   <li><a href="#">Политика <br> конфиденциальности</a></li>
-					   <li><a href="#">Правила пользование</a></li>
-					</ul>
+					<h3 class="footer_title" id="ftitle" >О портале B2B</h3>
+					<ul class="footer_lists_map">
+						<li><a href="faq.html">ЧАВО</a></li>
+						<li><a href="about.html">О площадке B2B</a></li>
+						<li><a href="terms.html">Правила пользования</a></li>
+					 </ul>
 				 </div>
 			  </div>
 			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
 				 <div class="footer_third_widget">
-					<h3 class="footer_title">Карта <span>Сайта</span></h3>
+					<h3 class="footer_title" id="ftitlemap">Карта Сайта</h3>
 					<ul class="footer_lists_map">
-					   <li><a href="#">Главная</a></li>
-					   <li><a href="#">Новости</a></li>
-					   <li><a href="#">Компании</a></li>
-					   <li><a href="#">Контакты</a></li>
+						<li><a href="main.html">Главная</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="companies.html">Компании</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				 </div>
 			  </div>
 			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
 				 <div class="footer_forth_widget">
-					<h3 class="footer_title">Новостная <span>Рассылка</span></h3>
+					<h3 class="footer_title" id="fnewssubs">Новостная Рассылка</h3>
 					<form id="newsLetterForm">
-					   <div class="subscribe_box">
-						  <p>Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
+					   <div class="subscribe_box" >
+						  <p id="newssubsdescr">Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
 						  <div class="input_wrap">
 							 <input id="newsLetterEmailTextBox" name="email" placeholder="Введите ваш email" type="email" required="">
 							 <i class="fa fa-envelope"></i>
@@ -441,19 +441,25 @@
 				<form enctype="multipart/form-data" class="modal-reg-wrapper" id="signup-form">
 					<div class="modal-reg-close">×</div>
 					<div class="modal-reg-header">
-						<h1>Регистрация</h1>
+						<h1 data-lang="ru" style="display: none;">Регистрация</h1>
+						<h1 data-lang="en" style="display: none;">Registration</h1>
+						<h1 data-lang="tj" style="display: none;">Бақайдгирӣ</h1>
 					</div>
 					<div class="row">
 						<div class="col">
-						   <div class="form-group">
-							   <input name="name" type="text" class="form-control" id="regname" placeholder="Наименование Вашего предприятия">
+						   <div class="form-group company_name">
+							   <input data-lang="ru" style="display: none;" name="name" type="text" class="form-control" id="regname-ru" placeholder="Наименование Вашего предприятия">
+							   <input data-lang="en" style="display: none;" name="name" type="text" class="form-control" id="regname-en" placeholder="Name of your company">
+							   <input data-lang="tj" style="display: none;" name="name" type="text" class="form-control" id="regname-tj" placeholder="Номи ширкати шумо">
 						   </div>
 						</div>
 					</div>
 					<div class="row">
 					   <div class="col">
-						   <div class="form-group">
-							   <input name="address" type="text" class="form-control" id="regaddress" placeholder="Адрес">
+						   <div class="form-group company_address">
+							   <input data-lang="ru" style="display: none;" name="address" type="text" class="form-control" id="regaddress-ru" placeholder="Адрес">
+							   <input data-lang="en" style="display: none;" name="address" type="text" class="form-control" id="regaddress-en" placeholder="Address">
+							   <input data-lang="tj" style="display: none;" name="address" type="text" class="form-control" id="regaddress-tj" placeholder="Суроға">
 						   </div>
 					   </div>
 				   </div>
@@ -477,26 +483,28 @@
 				   <div class="row">
 					   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="modal-reg-textarea">
-							<div class="form-group">
-								<textarea class="form-control text-area-style" id="regcompdescr" rows="5" placeholder="При описание используйте ключевые слова, которые характерны именно вашему виду деятельности, чтобы потенциальные клиенты, ищущие товары или услуги, нашли вашу компанию."></textarea>
+							<div class="form-group company_description">
+								<textarea data-lang="ru" style="display: none;" class="form-control text-area-style" id="regcompdescr-ru" rows="5" placeholder="При описание используйте ключевые слова, которые характерны именно вашему виду деятельности, чтобы потенциальные клиенты, ищущие товары или услуги, нашли вашу компанию."></textarea>
+								<textarea data-lang="en" style="display: none;" class="form-control text-area-style" id="regcompdescr-en" rows="5" placeholder="Use keywords for description   that are specific to your type of activity so that potential customers looking for products or services find your company."></textarea>
+								<textarea data-lang="tj" style="display: none;" class="form-control text-area-style" id="regcompdescr-tj" rows="5" placeholder="Ҳангоми пур кардани сатри зерин, аз калимаҳои калидие истифода намоед, ки ба самти фаолияти шумо нигаронида шудаанд, то ин ки мизоҷон ҳангоми ҷустучӯ, маҳсулот ва ё хизматрасонии ширкати шуморо дарёфт намоянд."></textarea>
 							</div>
 							<div class="form-group row">
-								<div class="col-md-6">
-								   <div class="checkbox-block">
+								<div style="display: none;" class="col-md-6" id="chbox-tj">
+								   <div  class="check-box-css">
 									    <label>
 										   <input class="g-mr-5 chbx" id="trans-tajik" type="checkbox">Разрешить перевод на таджикский
 										</label>
 									</div>
 								</div>
-								<div hidden="hidden" class="col-md-6">
-								   <div class="checkbox-block">
+								<div style="display: none;" class="col-md-6" id="chbox-ru">
+								   <div  class="check-box-css">
 									   <label >
 										   <input class="g-mr-5 chbx" id="trans-russia" type="checkbox">Разрешить перевод на русский
 										</label>
 									</div>
 								</div>
-								<div class="col-md-6">
-								   <div class="checkbox-block">
+								<div style="display: none;" class="col-md-6" id="chbox-en">
+								   <div  class="check-box-css">
 									   <label >
 										   <input class="g-mr-5 chbx" id="trans-english" type="checkbox">Разрешить перевод на английский
 										</label>
@@ -646,6 +654,7 @@
 	<script src="https://unpkg.com/tippy.js@6"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/registrationScript.js"></script>
+	<script src="js/localization.js"></script>
 	<script src="js/script.js"></script>
 	
 </body>

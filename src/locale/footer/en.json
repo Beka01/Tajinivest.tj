@@ -1,0 +1,59 @@
+{
+    "links":
+[
+    {
+        "url":"main.html",
+        "name":"Home"
+    },
+
+    {
+        "url":"news.html",
+        "name":"News"
+    },
+
+    {
+        "url":"companies.html",
+        "name":"Companies"
+    },
+
+    {
+        "url":"contacts.html",
+        "name":"Contacts"
+    },
+    
+    {
+        "url":"faq.html",
+        "name":"FAQ"
+    },
+
+    {
+        "url":"about.html",
+        "name":"About B2B Website"
+    },
+    
+    {
+        "url":"terms.html",
+        "name":"Terms of use"
+    }
+],
+"texts": {
+    "subs-text": "Subscription",
+    "ftitle": "About B2B",
+    "ftitlemap": "Sitemap",
+    "fnewssubs": "Newsletters",
+    "newssubsdescr": "Subscribe to our newsletter and you can receive the latest news from the B2B portal",
+    "subsBtn": "Subscribe"    
+},
+"attrs": [
+    {
+        "id": "newslet-email",
+        "attr": "placeholder",
+        "value": "Enter your email"
+    },
+    {
+        "id": "subsBtn",
+        "attr": "value",
+        "value": "Subscribe"
+    }
+]
+}

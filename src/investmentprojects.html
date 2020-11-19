@@ -39,12 +39,12 @@
                         <div class="contacts-icon">
                             <i class="fa fa-sign-in"></i> 
                         </div> 
-                        <a class="header-text" href="#">Войти</a> 
+                        <a class="header-text" id="logintop" href="#">Войти</a> 
                     </div>
                     <div class="lang-choose">
-                        <a class="lang-mp-icon" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
-                        <a class="lang-mp-icon" href="#"> <img src="img/main-page/en.png" alt=""> </a>
-                        <a class="lang-mp-icon" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
+                        <a class="lang-mp-icon" data-lang="tj" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
+                        <a class="lang-mp-icon" data-lang="en" href="#"> <img src="img/main-page/en.png" alt=""> </a>
+                        <a class="lang-mp-icon" data-lang="ru" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
                     </div>
                 </div>
             </div>
@@ -309,7 +309,7 @@
 
 					</div>
 					<div class="footer_follow">
-					   <h4 class="follow_title">Подписки</h4>
+					   <h4 id="subs-text" class="follow_title">Подписки</h4>
 					   <ul class="footer_social_icons">
 						  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -320,31 +320,31 @@
 			  </div>
 			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
 				 <div class="footer_second_widget">
-					<h3 class="footer_title">О портале <span>B2B</span></h3>
-					<ul class="footer_lists">
-					   <li><a href="#">ЧАВО</a></li>
-					   <li><a href="#">Политика <br> конфиденциальности</a></li>
-					   <li><a href="#">Правила пользование</a></li>
-					</ul>
+					<h3 class="footer_title" id="ftitle" >О портале B2B</h3>
+					<ul class="footer_lists_map">
+						<li><a href="faq.html">ЧАВО</a></li>
+						<li><a href="about.html">О площадке B2B</a></li>
+						<li><a href="terms.html">Правила пользования</a></li>
+					 </ul>
 				 </div>
 			  </div>
 			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
 				 <div class="footer_third_widget">
-					<h3 class="footer_title">Карта <span>Сайта</span></h3>
+					<h3 class="footer_title" id="ftitlemap">Карта Сайта</h3>
 					<ul class="footer_lists_map">
-					   <li><a href="#">Главная</a></li>
-					   <li><a href="#">Новости</a></li>
-					   <li><a href="#">Компании</a></li>
-					   <li><a href="#">Контакты</a></li>
+						<li><a href="main.html">Главная</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="companies.html">Компании</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				 </div>
 			  </div>
 			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
 				 <div class="footer_forth_widget">
-					<h3 class="footer_title">Новостная <span>Рассылка</span></h3>
+					<h3 class="footer_title" id="fnewssubs">Новостная Рассылка</h3>
 					<form id="newsLetterForm">
-					   <div class="subscribe_box">
-						  <p>Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
+					   <div class="subscribe_box" >
+						  <p id="newssubsdescr">Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
 						  <div class="input_wrap">
 							 <input id="newsLetterEmailTextBox" name="email" placeholder="Введите ваш email" type="email" required="">
 							 <i class="fa fa-envelope"></i>
@@ -382,7 +382,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/fontawesome.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<script src="js/localization.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

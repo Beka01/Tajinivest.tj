@@ -1,0 +1,76 @@
+{
+    "links":
+[
+    
+],
+"texts": {
+    
+},
+"attrs": [
+    {
+        "id": "regcompinsta",
+        "attr": "placeholder",
+        "value": "Instagram"
+    },
+    {
+        "id": "regcompfacebook",
+        "attr": "placeholder",
+        "value": "Facebook"
+    },
+    {
+        "id": "regcompfax",
+        "attr": "placeholder",
+        "value": "Fax"
+    },
+    {
+        "id": "regcompphone",
+        "attr": "placeholder",
+        "value": "Company phone"
+    },
+    {
+        "id": "regcontname",
+        "attr": "placeholder",
+        "value": "Full name of contact person"
+    },
+    {
+        "id": "regcompemail",
+        "attr": "placeholder",
+        "value": "E-mail"
+    },
+    {
+        "id": "regcomppass",
+        "attr": "placeholder",
+        "value": "Password"
+    },
+    {
+        "id": "regconfpass",
+        "attr": "placeholder",
+        "value": "Confirm password"
+    },
+    {
+        "id": "regBtnSubmit",
+        "attr": "value",
+        "value": "Send"
+    },
+    {
+        "id": "logo_file",
+        "attr": "value",
+        "value": "Upload logo"
+    },
+    {
+        "id": "trans-english",
+        "attr": "input",
+        "value": "Allow english translation"
+    },
+    {
+        "id": "trans-russia",
+        "attr": "input",
+        "value": "Allow russian translation"
+    },
+    {
+        "id": "trans-tajik",
+        "attr": "input",
+        "value": "Allow tajik translation"
+    }
+]
+}

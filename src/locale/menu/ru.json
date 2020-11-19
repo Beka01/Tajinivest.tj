@@ -1,3 +1,5 @@
+{
+    "links":
 [
     {
         "url":"main.html",
@@ -33,4 +35,8 @@
         "url":"contacts.html",
         "name":"контакты"
     }
-]
+],
+"texts": {
+    "logintop": "Войти"
+}
+}
