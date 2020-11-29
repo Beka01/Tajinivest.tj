@@ -1,11 +1,13 @@
 "use strict";
 const DEFAULT_LOCALE = 'ru';
 var currentLocale = localStorage.getItem('locale') || DEFAULT_LOCALE;
+let validationMessages = {};
 
+$(document).ready(function () {
 localize();
 
 function localize(){
-
+   
     // MENU HEADER
     $.get('locale/menu/' + currentLocale + '.json', function(ans){
         localizeMenu(ans);
@@ -33,8 +35,10 @@ function localize(){
             locRegJson(ans);
         });
     });
-
+    
     localeRegistration();  
+    checkBoxSwitcher();
+    
    
 }
 
@@ -43,6 +47,7 @@ $('.lang-choose a').on('click', function(e){
     currentLocale = thisel.data('lang');
     localStorage.setItem('locale', currentLocale);
     localize();
+    window.loadValidationMessages('#regcompform form');
     e.preventDefault();
     return false;
 }); 
@@ -72,6 +77,9 @@ function locRegJson(registration){
     for (let t of registration.attrs){
         $('#' + t.id).attr(t.attr, t.value);
     }
+    for (let t in registration.texts){
+        $('#' + t).html(registration.texts[t]);
+    }
 }
 
 function localeRegistration(){
@@ -92,3 +100,47 @@ function localeRegistration(){
     $('.company_description [data-lang =' + currentLocale + ']').show();
 
 }
+function checkBoxSwitcher(){
+    if(window.currentLocale == "ru"){
+      $("#chbox-tj").show();
+      $("#chbox-en").show();
+      $("#chbox-ru").hide();
+    } else if(window.currentLocale == "en") {
+      $("#chbox-tj").show();
+      $("#chbox-ru").show();
+      $("#chbox-en").hide();
+    }else if(window.currentLocale == "tj") {
+      $("#chbox-en").show();
+      $("#chbox-ru").show();
+      $("#chbox-tj").hide();
+    }
+  } 
+
+//Validation form text translation function
+// function validTextCompName(){
+//     const cNameRu = "Вы не указали название вашей компании";
+//     const cNameEn = "You have not provided your company name";
+//     const cNameTj = "Шумо номи ширкати худро ворид накардед";
+
+//     if(window.currentLocale == "ru"){
+//         return cNameRu;
+//     } else if (window.currentLocale == "en") {
+//         return cNameEn;
+//     } else if (window.currentLocale == "tj"){
+//         return cNameTj;
+//     }
+// }
+
+// function fillValidationMessages() {
+//     $.get('locale/validate/' + currentLocale + '.json' , function(ans){
+//        window.validationMessages = (ans);
+//        window.validateForms('#regcompform form');
+       
+//     }).fail( function (){
+//         $.get('locale/validate/' + DEFAULT_LOCALE + '.json', function(ans){
+//             window.validationMessages = (ans);
+//             window.validateForms('#regcompform form');
+//         });
+//     });
+// }
+});

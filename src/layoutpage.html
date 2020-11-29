@@ -1,166 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B.tj - Новости</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>B2B.tj - Главная</title>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css"> -->
 	<link rel="stylesheet" href="css/style.min.css"> </head>
-</head>
+
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="contacts-info">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="contacts-wrapper">
-                        <div class="contacts-icon">
-                            <i class="fa fa-fax"></i> 
-                        </div> 
-                        <a href="#" class="header-text">+992 37 221 87 32</a> 
-                    </div>
-                    <div class="contacts-wrapper">
-                        <div class="contacts-icon">
-                            <i class="fa fa-envelope-o"></i> 
-                        </div> 
-                        <a href="#" class="header-text">info@b2b.tj</a> 
-                    </div>
-                    
-                </div>
-                <div class="lang-info">
-                    <div class="sign-wrapper">
-                        <div class="contacts-icon">
-                            <i class="fa fa-sign-in"></i> 
-                        </div> 
-                        <a class="header-text" href="#">Войти</a> 
-                    </div>
-                    <div class="lang-choose">
-                        <a class="lang-mp-icon" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
-                        <a class="lang-mp-icon" href="#"> <img src="img/main-page/en.png" alt=""> </a>
-                        <a class="lang-mp-icon" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav id="myHeaderNews" class="nav-news nav-cont-link" >
-        <div class="container">
-                <ul class="menu-mp">
-                    <li class="menu-mp-link"> <a href="main.html" class="item-mp-link">Главная</a> </li>
-					<li class="menu-mp-link"> <a href="news.html" class="item-mp-link">Новости</a> </li>
-					<li class="menu-mp-link"> <a href="companies.html" class="item-mp-link">Компании</a> </li>
-					<li class="menu-mp-link"> <a href="investmentprojects.html" class="item-mp-link">Инвестиционные проекты</a> </li>
-					<li class="menu-mp-link"> <a href="businessguide.html" class="item-mp-link">Бизнес путеводитель</a> </li>
-					<li class="menu-mp-link"> <a href="articles.html" class="item-mp-link">Статьи</a> </li>
-					<li class="menu-mp-link"> <a href="contacts.html" class="item-mp-link">Контакты</a> </li>
-                </ul>
-        </div>
-    </nav>
-    {{{content}}}
-	<section class="partners-mp">
-		<div class="container">
-			<div class="partners-mp-logos">
-			   <div class="partner"><img src="img/main-page/sec-partners/sarmoya_ru.png"></div>
-			   <div class="partner"><img src="img/main-page/sec-partners/TajInvest.png"></div>
-			   <div class="partner"><img src="img/main-page/sec-partners/giz.png"></div>
-			   <div class="partner"><img src="img/main-page/sec-partners/osce.png"></div>
+	<template id="headerTemps">
+		<div class="header-wrapper">
+			<div class="contacts-info">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="contacts-wrapper">
+					<div class="contacts-icon">
+						<i class="fa fa-fax"></i> 
+					</div> 
+					<a href="#" class="header-text">+992 37 221 87 32</a> 
+				</div>
+				<div class="contacts-wrapper">
+					<div class="contacts-icon">
+						<i class="fa fa-envelope-o"></i> 
+					</div> 
+					<a href="#" class="header-text">info@b2b.tj</a> 
+				</div>
+			</div>
+			<div class="lang-info">
+				<div class="sign-wrapper">
+					<div class="contacts-icon">
+						<i class="fa fa-user-plus"></i> 
+					</div> 
+					<a class="header-text" id="signuptop" data-modal="compreg" href="#">Регистрация</a> 
+				</div>
+				<div class="sign-wrapper">
+					<div class="contacts-icon">
+						<i class="fa fa-sign-in"></i> 
+					</div> 
+					<a class="header-text" id="logintop" href="#">Войти</a> 
+				</div>
+				<div class="lang-choose">
+					<a class="lang-mp-icon" data-lang="tj" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
+					<a class="lang-mp-icon" data-lang="en" href="#"> <img src="img/main-page/en.png" alt=""> </a>
+					<a class="lang-mp-icon" data-lang="ru" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
+				</div>
 			</div>
 		</div>
-	 </section>
-	 
-	 <div class="footer_top">
-		<div class="container">
-		   <div class="row">
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12 text-center">
-				 <div class="footer_first_widget">
-					<div class="footer_logo">
-					   <img class="img-logo" src="img/main-page/logo.png" alt="B2B logo">
-					</div>
-					<div class="seperator-logo">
+	</template>
 
-					</div>
-					<div class="footer_follow">
-					   <h4 class="follow_title">Подписки</h4>
-					   <ul class="footer_social_icons">
-						  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					   </ul>
-					</div>
-				 </div>
-			  </div>
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
-				 <div class="footer_second_widget">
-					<h3 class="footer_title">О портале <span>B2B</span></h3>
-					<ul class="footer_lists">
-					   <li><a href="#">ЧАВО</a></li>
-					   <li><a href="#">Политика <br> конфиденциальности</a></li>
-					   <li><a href="#">Правила пользование</a></li>
-					</ul>
-				 </div>
-			  </div>
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
-				 <div class="footer_third_widget">
-					<h3 class="footer_title">Карта <span>Сайта</span></h3>
-					<ul class="footer_lists_map">
-					   <li><a href="#">Главная</a></li>
-					   <li><a href="#">Новости</a></li>
-					   <li><a href="#">Компании</a></li>
-					   <li><a href="#">Контакты</a></li>
-					</ul>
-				 </div>
-			  </div>
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
-				 <div class="footer_forth_widget">
-					<h3 class="footer_title">Новостная <span>Рассылка</span></h3>
-					<form id="newsLetterForm">
-					   <div class="subscribe_box">
-						  <p>Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
-						  <div class="input_wrap">
-							 <input id="newsLetterEmailTextBox" name="email" placeholder="Введите ваш email" type="email" required="">
-							 <i class="fa fa-envelope"></i>
-						  </div>
-						  <div>
-							 <input name="subscribeToNewLetterButton" value="Подписаться" type="submit" id="subscribeToNewLetterButton"> 
-						 </div>
-						  <div id="newsLetterFormError" class="alert alert-danger" style="margin-top:3px;margin-bottom:3px;display:none" role="alert">
-							 <button type="button" class="close" id="closeButton"> 
-								<span aria-hidden="true">×</span>
-								<span class="sr-only">Close</span> 
-							 </button>
-							 <p id="newsLetterFormErrorMessage"></p>
-						  </div>
-					   </div>
+	<template id="navTemps">
+		<ul class="menu-mp">
+			<li class="menu-mp-link"> <a href="main.html" class="item-mp-link">Главная</a> </li>
+			<li class="menu-mp-link"> <a href="news.html" class="item-mp-link">Новости</a> </li>
+			<li class="menu-mp-link"> <a href="companies.html" class="item-mp-link">Компании</a> </li>
+			<li class="menu-mp-link"> <a href="investmentprojects.html" class="item-mp-link">Инвестиционные проекты</a> </li>
+			<li class="menu-mp-link"> <a href="businessguide.html" class="item-mp-link">Бизнес путеводитель</a> </li>
+			<li class="menu-mp-link"> <a href="articles.html" class="item-mp-link">Статьи</a> </li>
+			<li class="menu-mp-link"> <a href="contacts.html" class="item-mp-link">Контакты</a> </li>
+		</ul>
+	</template>
+
+	<template id="contactsTemps">
+		<div id="contacts-box">
+			<div class="container">
+				<div class="mp-form-wrapper">
+					<form class="contact-form">
+						<span class="contact-form-title">
+							Связаться с нами
+						</span>
+						<div class="inline-inputs-wrapper">
+							<div class="data-form-input" data-validate="Name is required">
+								<span class="label-input-form">Назовите ваше имя *</span>
+								<input class="input100" type="text" name="name" placeholder="Введите ваше имя">
+							</div>
+			
+							<div class="data-form-input" data-validate = "Valid email is required: ex@abc.xyz">
+								<span class="label-input-form">Введите ваше email *</span>
+								<input class="input100" type="text" name="email" placeholder="Введите ваш email">
+							</div>
+						</div>
+						<div class="data-form-input-msg" data-validate = "Message is required">
+							<span class="label-input-form">Сообщение</span>
+							<textarea class="input100" name="message" placeholder="Напишите ваше сообщение..."></textarea>
+						</div>
+		
+						<div class="container">
+							<div class="all-news-btn"> <a href="#">Отправить</a> </div>
+						</div>
 					</form>
-				 </div>
-			  </div>
-		   </div>
+				</div>
+			</div>
 		</div>
-	 </div>
-	 <div class="footer_copyright">
-		<div class="container">
-		   <div class="row">
-			  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-				 <p class="copyright">© Business to Business, 2020</p>
-			  </div>
-		   </div>
-		</div>
-	 </div>
+	</template>
 
-	 <a href="#up" class="pageup">
-		<img src="icons/up.svg" alt="pageups">
-	 </a>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/fontawesome.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<template id="sponsorsTemps">
+		<div id="sponsors-box">
+			<div class="container">
+				<div class="row">
+				   <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center">
+				   </div>
+				   <div class="container">
+					  <div class="customer-logos slider">
+						 <div class="slide"><img src="img/main-page/sec-sponsors/1.jpg"></div>
+						 <div class="slide"><img src="img/main-page/sec-sponsors/2.jpg"></div>
+						 <div class="slide"><img src="img/main-page/sec-sponsors/3.jpg"></div>
+						 <div class="slide"><img src="img/main-page/sec-sponsors/4.jpg"></div>
+						 <div class="slide"><img src="img/main-page/sec-sponsors/5.jpg"></div>
+						 <div class="slide"><img src="img/main-page/sec-sponsors/6.jpg"></div>
+					  </div>
+				   </div>
+				</div>
+			 </div>
+		</div>
+	</template>
+
+	<template id="partnersTemps">
+		<div id="partners-box">
+			<div class="container">
+				<div class="partners-mp-logos">
+				   <div class="partner"><img src="img/main-page/sec-partners/sarmoya_ru.png"></div>
+				   <div class="partner"><img src="img/main-page/sec-partners/TajInvest.png"></div>
+				   <div class="partner"><img src="img/main-page/sec-partners/giz.png"></div>
+				   <div class="partner"><img src="img/main-page/sec-partners/osce.png"></div>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<template id="footerTemps">
+		<div class="footer_top">
+			<div class="container">
+			   <div class="row">
+				  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12 text-center">
+					 <div class="footer_first_widget">
+						<div class="footer_logo">
+						   <img class="img-logo" src="img/main-page/logo.png" alt="B2B logo">
+						</div>
+						<div class="seperator-logo">
+	
+						</div>
+						<div class="footer_follow">
+						   <h4 id="subs-text" class="follow_title">Подписки</h4>
+						   <ul class="footer_social_icons">
+							  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						   </ul>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
+					 <div class="footer_second_widget">
+						<h3 class="footer_title" id="ftitle" >О портале B2B</h3>
+						<ul class="footer_lists_map">
+							<li><a href="faq.html">ЧАВО</a></li>
+							<li><a href="about.html">О площадке B2B</a></li>
+							<li><a href="terms.html">Правила пользования</a></li>
+						 </ul>
+					 </div>
+				  </div>
+				  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
+					 <div class="footer_third_widget">
+						<h3 class="footer_title" id="ftitlemap">Карта Сайта</h3>
+						<ul class="footer_lists_map">
+							<li><a href="main.html">Главная</a></li>
+							<li><a href="news.html">Новости</a></li>
+							<li><a href="companies.html">Компании</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					 </div>
+				  </div>
+				  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
+					 <div class="footer_forth_widget">
+						<h3 class="footer_title" id="fnewssubs">Новостная Рассылка</h3>
+						<form id="newsLetterForm">
+						   <div class="subscribe_box" >
+							  <p id="newssubsdescr">Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
+							  <div class="input_wrap">
+								 <input id="newsLetterEmailTextBox" name="email" placeholder="Введите ваш email" type="email" required="">
+								 <i class="fa fa-envelope"></i>
+							  </div>
+							  <div>
+								 <input name="subscribeToNewLetterButton" value="Подписаться" type="submit" id="subscribeToNewLetterButton"> 
+							 </div>
+							  <div id="newsLetterFormError" class="alert alert-danger" style="margin-top:3px;margin-bottom:3px;display:none" role="alert">
+								 <button type="button" class="close" id="closeButton"> 
+									<span aria-hidden="true">×</span>
+									<span class="sr-only">Close</span> 
+								 </button>
+								 <p id="newsLetterFormErrorMessage"></p>
+							  </div>
+						   </div>
+						</form>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+		 <div class="footer_copyright">
+			<div class="container">
+			   <div class="row">
+				  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+					 <p class="copyright">© Business to Business, 2020</p>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+	</template>
+
+	<template id="registrationTemps">
+		<form enctype="multipart/form-data" class="modal-reg-wrapper" id="signup-form">
+			<div class="modal-reg-close" id="reg-close-btn">×</div>
+			<div class="modal-reg-header">
+				<h1 data-lang="ru" style="display: none;">Регистрация</h1>
+				<h1 data-lang="en" style="display: none;">Registration</h1>
+				<h1 data-lang="tj" style="display: none;">Бақайдгирӣ</h1>
+			</div>
+			<div class="row">
+				<div class="col">
+				   <div class="form-group company_name">
+					   <input data-lang="ru" style="display: none;" name="name" type="text" class="form-control" id="regname-ru" placeholder="Наименование Вашего предприятия">
+					   <input data-lang="en" style="display: none;" name="name" type="text" class="form-control" id="regname-en" placeholder="Name of your company">
+					   <input data-lang="tj" style="display: none;" name="name" type="text" class="form-control" id="regname-tj" placeholder="Номи ширкати шумо">
+				   </div>
+				</div>
+			</div>
+			<div class="row">
+			   <div class="col">
+				   <div class="form-group company_address">
+					   <input data-lang="ru" style="display: none;" name="address" type="text" class="form-control" id="regaddress-ru" placeholder="Адрес">
+					   <input data-lang="en" style="display: none;" name="address" type="text" class="form-control" id="regaddress-en" placeholder="Address">
+					   <input data-lang="tj" style="display: none;" name="address" type="text" class="form-control" id="regaddress-tj" placeholder="Суроға">
+				   </div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group">
+					   <select name="selectcountry" autocomplete="off" class="form-control country-reg-select" id="regcountry">
+						 <option value="default">--- Выберите страну ---</option>
+					   </select>
+					 </div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group">
+					   <select name="city" autocomplete="off" class="form-control city-reg-select " id="city-select" style="display: none;">
+					   </select>
+					   <input name="city" type="text" class="form-control " id="city-input" placeholder="Укажите город" style="display: none;">
+					   <label style="display: none;" class="error"></label>
+					 </div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="modal-reg-textarea">
+					<div class="form-group company_description">
+						<textarea data-lang="ru" style="display: none;" class="form-control text-area-style" id="regcompdescr-ru" rows="5" placeholder="При описание используйте ключевые слова, которые характерны именно вашему виду деятельности, чтобы потенциальные клиенты, ищущие товары или услуги, нашли вашу компанию."></textarea>
+						<textarea data-lang="en" style="display: none;" class="form-control text-area-style" id="regcompdescr-en" rows="5" placeholder="Use keywords for description   that are specific to your type of activity so that potential customers looking for products or services find your company."></textarea>
+						<textarea data-lang="tj" style="display: none;" class="form-control text-area-style" id="regcompdescr-tj" rows="5" placeholder="Ҳангоми пур кардани сатри зерин, аз калимаҳои калидие истифода намоед, ки ба самти фаолияти шумо нигаронида шудаанд, то ин ки мизоҷон ҳангоми ҷустучӯ, маҳсулот ва ё хизматрасонии ширкати шуморо дарёфт намоянд."></textarea>
+					</div>
+					<div class="form-group row">
+						<div style="display: none;" class="col-md-6" id="chbox-tj">
+						   <div  class="check-box-css">
+								<label>
+								   <input class="g-mr-5 chbx" name="allow-tj" type="checkbox"><span id="trans-tajik">Разрешить перевод на таджикский</span> 
+								</label>
+							</div>
+						</div>
+						<div style="display: none;" class="col-md-6" id="chbox-ru">
+						   <div  class="check-box-css">
+							   <label >
+								   <input class="g-mr-5 chbx" name="allow-ru" type="checkbox"><span id="trans-russia">Разрешить перевод на русский</span> 
+								</label>
+							</div>
+						</div>
+						<div style="display: none;" class="col-md-6" id="chbox-en">
+						   <div  class="check-box-css">
+							   <label >
+								   <input class="g-mr-5 chbx" name="allow-en" type="checkbox"><span id="trans-english">Разрешить перевод на английский</span> 
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				   
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-6">
+				   <div class="form-group">
+					   <select name="selectarea" class="form-control sectors-reg" id="regcomparea">
+						 <option value="default">-- Выберите область деятельности ---</option>
+					   </select>
+					 </div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group  icon-in">
+						   <input type="text" class="form-control reg-input" id="regcompweb" placeholder="www.mysite.tj">
+						   <i class="fa fa-globe input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group icon-in">
+						<input type="text" class="form-control reg-input" id="regcompinsta" placeholder="Инстаграм">
+						<i class="fa fa-instagram input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group icon-in">
+						<input type="text" class="form-control reg-input" id="regcompfacebook" placeholder="Фейсбук">
+						<i class="fa fa-facebook-official input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="input-group">
+						<input class="input-tel-reg" type="tel" id="phone">
+					</div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="input-group upload-file-style">
+						<input type="file" class="input-logo-file" id="logo_file" accept="image/*" name="logo_file" value="Upload file" >
+						<label style="display: none;" class="error"></label>
+					</div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group icon-in">
+						<input type="phone" class="form-control reg-input" id="regcompfax" placeholder="Факс">
+						<i class="fa fa-fax input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group icon-in">
+						<input name="phone" type="phone" class="form-control reg-input" id="regcompphone" placeholder="Рабочий телефон">
+						<i class="fa fa-phone input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group icon-in">
+						<input type="text" class="form-control reg-input" id="regcontname" placeholder="ФИО контактного лица">
+						<i class="fa fa-user input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group icon-in">
+						<input name="email" type="text" class="form-control reg-input" id="regcompemail" placeholder="Почта">
+						<i class="fa fa-envelope input-icon" aria-hidden="true"></i>
+				   </div>
+			   </div>
+		   </div>
+		   <div class="row">
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group">
+					   <input name="password" type="password" autocomplete="password" class="form-control" id="regcomppass" placeholder="Пароль">
+				   </div>
+			   </div>
+			   <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				   <div class="form-group">
+					   <input name="repassword" type="password" autocomplete="password" class="form-control" id="regconfpass" placeholder="Подтвердите пароль">
+				   </div>
+			   </div>
+			</div>
+			<div class="captcha-reg">
+				<input class="modal-reg-btn" id="regBtnSubmit" type="submit" name="submit" value="Отправить"/>
+			   </div>
+		</form>
+	</template>
+
+	<template id="verificationTemps">
+		<div>
+			<div class="modal-reg-close modal-act">×</div>
+			<h1>Активация</h1>
+			<div>На вашу электронную почту была отправлена ссылка для активации. Для подтверждения регистрации пройдите по ссылке указанной в электронном письме.</div>
+		</div>
+	</template>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/localization.js"></script>
 	<script src="js/script.js"></script>
+	
+	
 </body>
 </html>

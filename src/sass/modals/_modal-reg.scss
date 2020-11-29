@@ -143,24 +143,54 @@
   padding-left: 35px; //change it base on your desired output
 }
 
-.input-logo-file {
-  border: 1px solid #ccc;
+// .input-logo-file {
+//   border: 1px solid #ccc;
+//   width: 100%;
+//   border-radius: 4px;
+//   padding: 0px;
+//   height: 37px;
+//   font-size: 15px;
+//   cursor: pointer;
+//   &[type=file]::-webkit-file-upload-button{
+//     background-color:$search_btn_color;
+//     border: 0;
+//     border-radius: 2px;
+//     color: white;
+//     height: 100%;
+//     margin-right: 10px;
+//     outline: none;
+//     cursor: pointer;
+//   }
+// }
+
+.upload-file-style{
   width: 100%;
-  border-radius: 4px;
-  padding: 0px;
-  height: 37px;
-  font-size: 15px;
+  border: 1px solid $color_grey_borders;
+  height: 38px;
+  border-radius: 3px;
+}
+
+.input-logo-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.input-logo-file::before {
+  content: 'Attach logo';
+  display: inline-block;
+  background: $search_btn_color;
+  padding: 6px 8px;
+  outline: none;
   cursor: pointer;
-  &[type=file]::-webkit-file-upload-button{
-    background-color:$search_btn_color;
-    border: 0;
-    border-radius: 2px;
-    color: white;
-    height: 100%;
-    margin-right: 10px;
-    outline: none;
-    cursor: pointer;
-  }
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+  height: 100%;
+  margin-right: -120px;
+}
+.input-logo-file:hover::before {
+  border-color: $search_btn_color;
+}
+.input-logo-file:active::before {
+  background: $search_btn_hover;
 }
 
 
@@ -186,8 +216,13 @@ label.error{
   margin-left: 3px;
 }
 
+.modal-act{
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 50;
+}
 
-.modal-window {
+.modal-link-sent {
   position: fixed;
   display: none;
   //background-color: rgba(255, 255, 255, 0.25);
@@ -195,10 +230,9 @@ label.error{
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999;
-  pointer-events: none;
-  transition: all 0.3s;
- 
+  z-index: 50;
+  
+  
   &>div {
     width: 500px;
     position: absolute;

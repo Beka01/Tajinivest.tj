@@ -37,6 +37,7 @@
     }
 ],
 "texts": {
-    "logintop": "Войти"
+    "logintop": "Войти",
+    "signuptop": "Регистрация"
 }
 }

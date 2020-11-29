@@ -4,7 +4,9 @@
     
 ],
 "texts": {
-    
+    "trans-english": "Разрешить перевод на английский",
+    "trans-russia": "Разрешить перевод на русский",
+    "trans-tajik": "Разрешить перевод на таджикский"
 },
 "attrs": [
     {
@@ -56,21 +58,7 @@
         "id": "logo_file",
         "attr": "value",
         "value": "Загрузите логотип"
-    },
-    {
-        "id": "trans-english",
-        "attr": "input",
-        "value": "Разрешить перевод на английский"
-    },
-    {
-        "id": "trans-russia",
-        "attr": "input",
-        "value": "Разрешить перевод на русский"
-    },
-    {
-        "id": "trans-tajik",
-        "attr": "input",
-        "value": "Разрешить перевод на таджикский"
     }
+    
 ]
 }

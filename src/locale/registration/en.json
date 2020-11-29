@@ -4,7 +4,9 @@
     
 ],
 "texts": {
-    
+    "trans-english" : "Allow english translation",
+    "trans-russia" : "Allow russian translation",
+    "trans-tajik" : "Allow tajik translation"
 },
 "attrs": [
     {
@@ -56,21 +58,6 @@
         "id": "logo_file",
         "attr": "value",
         "value": "Upload logo"
-    },
-    {
-        "id": "trans-english",
-        "attr": "input",
-        "value": "Allow english translation"
-    },
-    {
-        "id": "trans-russia",
-        "attr": "input",
-        "value": "Allow russian translation"
-    },
-    {
-        "id": "trans-tajik",
-        "attr": "input",
-        "value": "Allow tajik translation"
     }
 ]
 }

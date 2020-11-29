@@ -258,6 +258,8 @@ $(document).ready(function(){
             $(".pagi-comps li.page-item:eq(" + (currentPage - 1) + ")").addClass('active');
         }
     });
+
+    //var headerHtml = document.getElementById('header-temp');
 	
 });
 

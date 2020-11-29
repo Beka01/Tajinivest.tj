@@ -2,8 +2,95 @@
 let sectors = [];
 let countries = [];
 let cities = [];
+let registrationValidateMessages = {};
 
+function loadValidationMessages(form) {
+  $.get('locale/registrationValidate.json' , function(ans){
+    registrationValidateMessages = ans;
+    bindFormValidate(form);
+  });
+}
 
+function bindFormValidate (form){
+  $(form).off('click');
+  $(form).validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      address: {
+        required: true,
+        minlength: 8
+      },
+      selectarea: {
+        min: 0
+      },
+      selectcountry: {
+        min: 0
+      },
+      // city: {
+      //   min: 0
+      // },
+      phone: {
+        required: true
+      },
+      tel: {
+        required: true
+      },
+      password: {
+        required: true,
+        minlength: 6
+      },
+      repassword: {
+        required: true,
+        equalTo: "#regcomppass"
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: registrationValidateMessages.name.required[window.currentLocale],
+        minlength: registrationValidateMessages.name.minlength[window.currentLocale]
+      },
+      address: {
+        required: "Вы не указали адрес вашей компании",
+        minlength: "В адресе должно быть не меньше восьми символов"
+      },
+
+      selectarea: {
+        min: "Выберите область деятельности вашей компании"
+      },
+      // city: {
+      //   min: "Выберите город в которой ваша компания зарегистрирована"
+      // },
+      selectcountry: {
+        min: "Выберите страну в которой ваша компания зарегистрирована"
+      },
+      phone: {
+        required: "Укажите рабочий номер телефона"
+      },
+      tel: {
+        required: "Укажите номер телефона для привязки аккаунта"
+      },
+      password: {
+        required: "Введите пароль",
+        minlength: "Пароль должен быть не менее 6 символов"
+      },
+      repassword: {
+        required: "Повторите введенный пароль",
+        equalTo: "Пароли не совпадают"
+      },
+      email: {
+        required: "Укажите свою электронную почту",
+        email: "Неправильно введен адрес почты"
+      }
+    }
+  });
+}
 
 $(document).ready(function () {
 
@@ -45,23 +132,34 @@ $(document).ready(function () {
   }
   // APPEND FIREBASE DATA FOR SECTORS SELECT FORM TO THE HTML 
   function setSectors() {
+    $(".sectors-reg").empty();
+    sectors.sort(function(a, b){
+      return a[window.currentLocale] < b[window.currentLocale] ? -1 : 1;
+    });
     sectors.forEach((sector, sectorId) => {
-      const sectorOption = `<option id="sector${sectorId}" value="${sectorId}">${sector['ru']}</option>`;
+      const sectorOption = `<option id="sector${sectorId}" value="${sectorId}">${sector[window.currentLocale]}</option>`;
       $(".sectors-reg").append(sectorOption);
     });
   }
 
+
   // APPEND FIREBASE DATA FOR COUNTRIES SELECT FORM TO THE HTML
   function setCountries() {
+    let countryListEl = $(".country-reg-select");
     const tajikistanId = 211;
+    countryListEl.empty();
+    countries.sort(function(a, b){
+      return a[window.currentLocale] < b[window.currentLocale] ? -1 : 1;
+    });
     countries.forEach((country, index) => {
       const selected = country.id === tajikistanId ? ` selected=selected` : "";
-      const countryOption = `<option id="country-sel${index}" value="${country.id}">${country.ru}</option>`;
-      $(".country-reg-select").append(countryOption);
+      const countryOption = `<option id="country-sel${index}" value="${country.id}">${country[window.currentLocale]}</option>`;
+      
+      countryListEl.append(countryOption);
       
     });
 
-    $(".country-reg-select").val(tajikistanId).trigger('change');
+    countryListEl.val(tajikistanId).trigger('change');
   }
 
   $('#regcountry').on('change', function (event) {
@@ -70,16 +168,21 @@ $(document).ready(function () {
     const country = countries.find((country) => country.id === countryId);
 
     if (country.cities !== null) {
-      $('#city-select').empty().append(`<option value="" disabled>--- Выберите страну ---</option>`);
+      $('#city-select').empty();
+      country.cities.sort(function(a, b){
+        return a[window.currentLocale] < b[window.currentLocale] ? -1 : 1;
+      });
       country.cities.forEach((city, index) => {
         const cityOption = `
-          <option id="${city.ru}-${index}" value="${city.ru}">${city.ru}</option>
+          <option id="${city[window.currentLocale]}-${index}" value="${index}">${city[window.currentLocale]}</option>
         `;
         $('#city-select').append(cityOption);
+        
       });
       $('#city-input').hide();
       $('#city-select').show();
     } else {
+      $('#city-select').empty();
       $('#city-select').hide();
       $('#city-input').show();
     }
@@ -133,86 +236,10 @@ $(document).ready(function () {
   });
 
   // REGISTRATION FORM VALIDATOR
-  function validateForms(form) {
-    $(form).validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2
-        },
-        address: {
-          required: true,
-          minlength: 8
-        },
-        selectarea: {
-          min: 0
-        },
-        selectcountry: {
-          min: 0
-        },
-        // city: {
-        //   min: 0
-        // },
-        phone: {
-          required: true
-        },
-        tel: {
-          required: true
-        },
-        password: {
-          required: true,
-          minlength: 6
-        },
-        repassword: {
-          required: true,
-          equalTo: "#regcomppass"
-        },
-        email: {
-          required: true,
-          email: true
-        }
-      },
-      messages: {
-        name: {
-          required: "Вы не указали название вашей компании",
-          minlength: "Название компании должно быть не меньше двух символов"
-        },
-        address: {
-          required: "Вы не указали адрес вашей компании",
-          minlength: "В адресе должно быть не меньше восьми символов"
-        },
+  loadValidationMessages('#regcompform form');
+  
+  
 
-        selectarea: {
-          min: "Выберите область деятельности вашей компании"
-        },
-        // city: {
-        //   min: "Выберите город в которой ваша компания зарегистрирована"
-        // },
-        selectcountry: {
-          min: "Выберите страну в которой ваша компания зарегистрирована"
-        },
-        phone: {
-          required: "Укажите рабочий номер телефона"
-        },
-        tel: {
-          required: "Укажите номер телефона для привязки аккаунта"
-        },
-        password: {
-          required: "Введите пароль",
-          minlength: "Пароль должен быть не менее 6 символов"
-        },
-        repassword: {
-          required: "Повторите введенный пароль",
-          equalTo: "Пароли не совпадают"
-        },
-        email: {
-          required: "Укажите свою электронную почту",
-          email: "Неправильно введен адрес почты"
-        }
-      }
-    });
-  }
-  validateForms('#regcompform form');
 
   // FIREBASE AUTH FUNCTION 
   const signupForm = document.querySelector('#signup-form');
@@ -234,15 +261,16 @@ $(document).ready(function () {
       const companyCountry = signupForm['regcountry'].options[signupForm['regcountry'].selectedIndex].innerText;
       const companyCountryId = signupForm['regcountry'].value;
       const companyCity = signupForm['city-select'].value;
+      const companyCityName = signupForm['city-select'].options[signupForm['city-select'].selectedIndex].innerText;
       const companyCityInput = signupForm['city-input'].value;
 
       // INPUT COMPANY DESCRIPTION
       const companyDescrRu = signupForm['regcompdescr-ru'].value;
       const companyDescrEn = signupForm['regcompdescr-en'].value;
       const companyDescrTj = signupForm['regcompdescr-tj'].value;
-      // const transToRuss = signupForm['trans-russia'].value;
-      // const transToEng = signupForm['trans-english'].is(':checked');
-      // const transToTaj = signupForm['trans-tajik'].value;
+      const transToRuss = signupForm['allow-ru'].checked ? 1 : 0;
+      const transToEng = signupForm['allow-en'].checked ? 1 : 0;
+      const transToTaj = signupForm['allow-tj'].checked ? 1 : 0;
       //const companyArea = signupForm['regcomparea'].options[signupForm['regcomparea'].selectedIndex];
       const companyAreaId = signupForm['regcomparea'].value;
       const companyWeb = signupForm['regcompweb'].value;
@@ -255,8 +283,8 @@ $(document).ready(function () {
       const email = signupForm['regcompemail'].value;
       const password = signupForm['regcomppass'].value;
       let logoFile =  signupForm['logo_file'].files[0]; //change 
-      console.log(logoFile);
-      console.debug(signupForm['logo_file']);
+     
+      
       
 
         /*Maximum allowed size in bytes
@@ -286,13 +314,14 @@ $(document).ready(function () {
           companyCountry: companyCountry,
           companyCountryId: companyCountryId,
           companyCity: companyCity,
+          companyCityName: companyCityName,
           companyCityInput: companyCityInput,
           companyDescrRu: companyDescrRu,
           companyDescrEn: companyDescrEn,
           companyDescrTj: companyDescrTj,
-          // transToRuss: transToRuss,
-          // transToEng: transToEng,
-          // transToTaj: transToTaj,
+          transToRuss: transToRuss,
+          transToEng: transToEng,
+          transToTaj: transToTaj,
           //companyArea: companyArea,
           companyAreaId: companyAreaId,
           companyWeb: companyWeb,
@@ -317,8 +346,6 @@ $(document).ready(function () {
         const ref = firebase.storage().ref();   //ref to the storage
         const name = 'Users company logo/' + userVerify; //name of folder to save
         const task = ref.child(name).put(logoFile, metadata);
-        console.log(logoFile.length);
-        console.debug(task);
 
         task.then(snapshot => snapshot.ref.getDownloadURL())
             .then((url) => {
@@ -351,6 +378,7 @@ $(document).ready(function () {
           return;
         }
       console.log('Not validate');
+    
     }
 
   });
@@ -368,32 +396,29 @@ $(document).ready(function () {
 
   $('[data-modal=compreg]').on('click', () => {
     $('.overlay-reg, #regcompform').fadeIn('slow');
-    
+    setCountries();
+    setSectors();
   });
 
   //Close btn block
-  $('.modal-reg-close').on('click', () => {
+  $('#reg-close-btn').on('click', () => {
     $('.overlay-reg, #regcompform').fadeOut('fast');
     $(this).find('.modal-reg-wrapper').trigger('reset');
     $(this).find('label.error').hide();
     $(".error").removeClass("error");
   });
+  $('.modal-act').on('click', () => {
+    $('.overlay-reg, #open-modal').fadeOut('fast');
+    $(this).find('.modal-reg-wrapper').trigger('reset');
+    $(this).find('label.error').hide();
+    $(".error").removeClass("error");
+  });
 
-  checkBoxSwitcher();
-  // Check Box Hide/Show function
-  function checkBoxSwitcher(){
-    if(window.currentLocale == "ru"){
-      $("#chbox-tj").show();
-      $("#chbox-en").show();
-    } else if(window.currentLocale == "en") {
-      $("#chbox-tj").show();
-      $("#chbox-ru").show();
-    }else if(window.currentLocale == "tj") {
-      $("#chbox-en").show();
-      $("#chbox-ru").show();
-    }
-    
-  } 
+  
+
+  
+  //  function
+  
 });
 
 

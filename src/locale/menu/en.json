@@ -37,6 +37,7 @@
     }
 ],
 "texts": {
-    "logintop": "Login"
+    "logintop": "Login",
+    "signuptop": "Registration"
 }
 }

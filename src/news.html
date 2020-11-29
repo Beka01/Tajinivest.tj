@@ -11,58 +11,19 @@
 	<link rel="stylesheet" href="css/style.min.css"> </head>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="contacts-info">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="contacts-wrapper">
-                        <div class="contacts-icon">
-                            <i class="fa fa-fax"></i> 
-                        </div> 
-                        <a href="#" class="header-text">+992 37 221 87 32</a> 
-                    </div>
-                    <div class="contacts-wrapper">
-                        <div class="contacts-icon">
-                            <i class="fa fa-envelope-o"></i> 
-                        </div> 
-                        <a href="#" class="header-text">info@b2b.tj</a> 
-                    </div>
-                    
-                </div>
-                <div class="lang-info">
-                    <div class="sign-wrapper">
-                        <div class="contacts-icon">
-                            <i class="fa fa-sign-in"></i> 
-                        </div> 
-                        <a class="header-text" id="logintop" href="#">Войти</a> 
-                    </div>
-                    <div class="lang-choose">
-                        <a class="lang-mp-icon" data-lang="tj" href="#"> <img src="img/main-page/tg.png" alt=""> </a>
-                        <a class="lang-mp-icon" data-lang="en" href="#"> <img src="img/main-page/en.png" alt=""> </a>
-                        <a class="lang-mp-icon" data-lang="ru" href="#"> <img src="img/main-page/ru.png" alt=""> </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav id="myHeaderNews" class="nav-news nav-news-link" >
-        <div class="container">
-                <ul class="menu-mp">
-                    <li class="menu-mp-link"> <a href="main.html" class="item-mp-link">Главная</a> </li>
-					<li class="menu-mp-link"> <a href="news.html" class="item-mp-link">Новости</a> </li>
-					<li class="menu-mp-link"> <a href="companies.html" class="item-mp-link">Компании</a> </li>
-					<li class="menu-mp-link"> <a href="investmentprojects.html" class="item-mp-link">Инвестиционные проекты</a> </li>
-					<li class="menu-mp-link"> <a href="businessguide.html" class="item-mp-link">Бизнес путеводитель</a> </li>
-					<li class="menu-mp-link"> <a href="articles.html" class="item-mp-link">Статьи</a> </li>
-					<li class="menu-mp-link"> <a href="contacts.html" class="item-mp-link">Контакты</a> </li>
-                </ul>
-        </div>
-    </nav>
+    <div class="header" >
+		<div class="container" id="header-container">
+			
+		</div>
+	</div>
+	<div class="header-main-menu">
+		<nav id="myHeaderNews" class="nav-news nav-news-link" >
+			<div class="container" id="header-main-menu">
+				   
+			</div>
+		</nav>
+	</div>
+   
     <section class="news-mp">
 		<div class="container">
 			<div class="section-mp-header">
@@ -71,7 +32,7 @@
 		<div class="container">
 			<main class="grid-mp-news" id="loop">
 				<article class="list-group">
-					<a href="#"> <img src="img/main-page/sec-news/news1.jpg" alt="Sample photo">
+					<a href="news-article.html"> <img src="img/main-page/sec-news/news1.jpg" alt="Sample photo">
 						<div class="card-news-title"> <em>Опубликовано: 05.08.2020</em> <span>Хуршед Каримзода, глава Таможенной службы: Таджикистан в первом полугодии увеличил товарооборот</span> </div>
 					</a>
 				</article>
@@ -228,121 +189,76 @@
 			</div>
 		</div>
 	</section>
-    <section class="sponsors-mp">
-		<div class="container">
-		   <div class="row">
-			  <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center">
-			  </div>
-			  <div class="container">
-				 <div class="customer-logos slider">
-					<div class="slide"><img src="img/main-page/sec-sponsors/1.jpg"></div>
-					<div class="slide"><img src="img/main-page/sec-sponsors/2.jpg"></div>
-					<div class="slide"><img src="img/main-page/sec-sponsors/3.jpg"></div>
-					<div class="slide"><img src="img/main-page/sec-sponsors/4.jpg"></div>
-					<div class="slide"><img src="img/main-page/sec-sponsors/5.jpg"></div>
-					<div class="slide"><img src="img/main-page/sec-sponsors/6.jpg"></div>
-				 </div>
-			  </div>
-		   </div>
-		</div>
-	 </section>
-	<section class="partners-mp">
-		<div class="container">
-			<div class="partners-mp-logos">
-			   <div class="partner"><img src="img/main-page/sec-partners/sarmoya_ru.png"></div>
-			   <div class="partner"><img src="img/main-page/sec-partners/TajInvest.png"></div>
-			   <div class="partner"><img src="img/main-page/sec-partners/giz.png"></div>
-			   <div class="partner"><img src="img/main-page/sec-partners/osce.png"></div>
-			</div>
-		</div>
-	 </section>
-	 
-	 <div class="footer_top">
-		<div class="container">
-		   <div class="row">
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12 text-center">
-				 <div class="footer_first_widget">
-					<div class="footer_logo">
-					   <img class="img-logo" src="img/main-page/logo.png" alt="B2B logo">
-					</div>
-					<div class="seperator-logo">
+    <section class="sponsors-mp" id="sponsors-section">
+	</section>
 
-					</div>
-					<div class="footer_follow">
-					   <h4 id="subs-text" class="follow_title">Подписки</h4>
-					   <ul class="footer_social_icons">
-						  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					   </ul>
-					</div>
-				 </div>
-			  </div>
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
-				 <div class="footer_second_widget">
-					<h3 class="footer_title" id="ftitle" >О портале B2B</h3>
-					<ul class="footer_lists_map">
-						<li><a href="faq.html">ЧАВО</a></li>
-						<li><a href="about.html">О площадке B2B</a></li>
-						<li><a href="terms.html">Правила пользования</a></li>
-					 </ul>
-				 </div>
-			  </div>
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
-				 <div class="footer_third_widget">
-					<h3 class="footer_title" id="ftitlemap">Карта Сайта</h3>
-					<ul class="footer_lists_map">
-						<li><a href="main.html">Главная</a></li>
-						<li><a href="news.html">Новости</a></li>
-						<li><a href="companies.html">Компании</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
-					</ul>
-				 </div>
-			  </div>
-			  <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12">
-				 <div class="footer_forth_widget">
-					<h3 class="footer_title" id="fnewssubs">Новостная Рассылка</h3>
-					<form id="newsLetterForm">
-					   <div class="subscribe_box" >
-						  <p id="newssubsdescr">Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B</p>
-						  <div class="input_wrap">
-							 <input id="newsLetterEmailTextBox" name="email" placeholder="Введите ваш email" type="email" required="">
-							 <i class="fa fa-envelope"></i>
-						  </div>
-						  <div>
-							 <input name="subscribeToNewLetterButton" value="Подписаться" type="submit" id="subscribeToNewLetterButton"> 
-						 </div>
-						  <div id="newsLetterFormError" class="alert alert-danger" style="margin-top:3px;margin-bottom:3px;display:none" role="alert">
-							 <button type="button" class="close" id="closeButton"> 
-								<span aria-hidden="true">×</span>
-								<span class="sr-only">Close</span> 
-							 </button>
-							 <p id="newsLetterFormErrorMessage"></p>
-						  </div>
-					   </div>
-					</form>
-				 </div>
-			  </div>
-		   </div>
-		</div>
-	 </div>
-	 <div class="footer_copyright">
-		<div class="container">
-		   <div class="row">
-			  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-				 <p class="copyright">© Business to Business, 2020</p>
-			  </div>
-		   </div>
-		</div>
-	 </div>
+	<section class="partners-mp" id="partners-section">
+	</section>
+	 
+	<section id="main-footer">
+	</section>
 
 	 <a href="#up" class="pageup">
 		<img src="icons/up.svg" alt="pageups">
 	 </a>
+
+	<!-- MODALS -->
+	<div class="overlay-reg">
+		<div class="container">
+			 <!-- SIGN UP -->
+			<div class="modal-reg" id="regcompform">
+				
+			</div>
+			
+			<div id="open-modal" class="modal-link-sent">
+			  	
+			</div>
+		</div>
+	</div>	
+	 <!-- The core Firebase JS SDK is always required and must be listed first -->
+	 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+ 
+	 <!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+	 <script>
+	 // Your web app's Firebase configuration
+	 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	 var firebaseConfig = {
+		 apiKey: "AIzaSyBMLcSR6ZjtTIgI_-5b8QqDY_TgaBiJ9DQ",
+		 authDomain: "tajinvest-a77b7.firebaseapp.com",
+		 databaseURL: "https://tajinvest-a77b7.firebaseio.com",
+		 projectId: "tajinvest-a77b7",
+		 storageBucket: "tajinvest-a77b7.appspot.com",
+		 messagingSenderId: "257184881910",
+		 appId: "1:257184881910:web:ce9dccac5a8af6e25a20d7",
+		 measurementId: "G-7EETR5324V"
+	 };
+	 // Initialize Firebase
+	 firebase.initializeApp(firebaseConfig);
+	 firebase.analytics();
+	 // auth and firestore references
+	 const auth = firebase.auth();
+	 const dbFire = firebase.firestore();
+	 //const rootRef = database.ref('main-sectors');
+ 
+	 //update firestore settings
+	 dbFire.settings({ timestampsInSnapshot: true})
+	 </script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/fontawesome.min.js"></script>
+	<script src="js/layouts.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<script src="js/phone-script/intlTelInput.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/registrationScript.js"></script>
 	<script src="js/localization.js"></script>
 	<script src="js/script.js"></script>
 </body>
