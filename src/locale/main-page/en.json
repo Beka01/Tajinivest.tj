@@ -1,0 +1,33 @@
+{
+"texts": {
+    "decision-title": "Solving",
+    "decision-descr": "Your business tasks",
+
+    "partnership-title": "Partnership",
+    "partnership-descr": "Establishing communications and contacts in one click",
+
+    "platform-title": "Platform",
+    "platform-descr": "For trading your goods and services",
+
+    "registration-button": "Registration",
+    
+    "all-news-text": "All news",
+    "activity-section-text": "Sectors of activity",
+    "all-categories-text": "All categories",
+
+    "news-section-text": "News",
+    "company-section-text": "Companies",
+    "invest-section-text": "Investment projects  of the Republic of Tajikistan",
+    "business-section-text": "Business guide",
+    "articles-section-text": "Articles"
+
+    
+},
+"attrs": [
+    {
+        "id": "search-company",
+        "attr": "placeholder",
+        "value": "Search for a company and products..."
+    }
+]
+}

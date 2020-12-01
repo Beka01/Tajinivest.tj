@@ -35,6 +35,23 @@ function localize(){
             locRegJson(ans);
         });
     });
+
+    //MAIN-PAGE
+    $.get('locale/main-page/' + currentLocale + '.json', function(ans){
+        localizeMainPage(ans);
+    }).fail( function (){
+        $.get('locale/main-page/' + DEFAULT_LOCALE + '.json', function(ans){
+            localizeMainPage(ans);
+        });
+    });
+
+    $.get('locale/contacts-page/' + currentLocale + '.json', function(ans){
+        localizeContactsPage(ans);
+    }).fail( function (){
+        $.get('locale/main-page/' + DEFAULT_LOCALE + '.json', function(ans){
+            localizeContactsPage(ans);
+        });
+    });
     
     localeRegistration();  
     checkBoxSwitcher();
@@ -79,6 +96,31 @@ function locRegJson(registration){
     }
     for (let t in registration.texts){
         $('#' + t).html(registration.texts[t]);
+    }
+}
+
+// MAIN-PAGE BODY
+function localizeMainPage(main){
+    // for (let m of main.links){
+    //     $('.footer_lists_map a[href='+ m.url.replace('\.', '\\.') +']').text(m.name);
+    // }
+    for (let t in main.texts){
+        $('#' + t).text(main.texts[t]);
+    }
+    for (let t of main.attrs){
+        $('#' + t.id).attr(t.attr, t.value);
+    }
+}
+
+function localizeContactsPage(contacts){
+    // for (let m of main.links){
+    //     $('.footer_lists_map a[href='+ m.url.replace('\.', '\\.') +']').text(m.name);
+    // }
+    for (let t in contacts.texts){
+        $('#' + t).text(contacts.texts[t]);
+    }
+    for (let t of contacts.attrs){
+        $('#' + t.id).attr(t.attr, t.value);
     }
 }
 

@@ -1,0 +1,28 @@
+{
+    "texts": {
+        "contact-us-title-text": "Муроҷиат ба гурӯҳи B2B",
+        "contact-name-title-text": "Номи худро ворид кунед *",
+        "email-input-title-text": "Почтаи электронии худро ворид кунед *",
+        "contact-message-title-text": "Мактуб",
+        "contact-send-btn-text" : "Паём фиристед"
+    
+        
+    },
+    "attrs": [
+        {
+            "id": "contact-name-input-text",
+            "attr": "placeholder",
+            "value": "Ном"
+        },
+        {
+            "id": "contact-email-input-text",
+            "attr": "placeholder",
+            "value": "Почтаи электронӣ"
+        },
+        {
+            "id": "contact-message-input-text",
+            "attr": "placeholder",
+            "value": "Паёми худро нависед..."
+        }
+    ]
+}

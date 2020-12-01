@@ -46,12 +46,12 @@
 },
 "attrs": [
     {
-        "id": "newslet-email",
+        "id": "newsLetterEmailTextBox",
         "attr": "placeholder",
         "value": "Enter your email"
     },
     {
-        "id": "subsBtn",
+        "id": "subscribeToNewLetterButton",
         "attr": "value",
         "value": "Subscribe"
     }

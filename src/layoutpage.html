@@ -72,27 +72,27 @@
 			<div class="container">
 				<div class="mp-form-wrapper">
 					<form class="contact-form">
-						<span class="contact-form-title">
+						<span id="contact-us-title-text" class="contact-form-title">
 							Связаться с нами
 						</span>
 						<div class="inline-inputs-wrapper">
 							<div class="data-form-input" data-validate="Name is required">
-								<span class="label-input-form">Назовите ваше имя *</span>
-								<input class="input100" type="text" name="name" placeholder="Введите ваше имя">
+								<span id="contact-name-title-text" class="label-input-form">Назовите ваше имя *</span>
+								<input id="contact-name-input-text" class="input100" type="text" name="name" placeholder="Введите ваше имя">
 							</div>
 			
 							<div class="data-form-input" data-validate = "Valid email is required: ex@abc.xyz">
-								<span class="label-input-form">Введите ваше email *</span>
-								<input class="input100" type="text" name="email" placeholder="Введите ваш email">
+								<span id="email-input-title-text" class="label-input-form">Введите ваше email *</span>
+								<input id="contact-email-input-text" class="input100" type="text" name="email" placeholder="Введите ваш email">
 							</div>
 						</div>
 						<div class="data-form-input-msg" data-validate = "Message is required">
-							<span class="label-input-form">Сообщение</span>
-							<textarea class="input100" name="message" placeholder="Напишите ваше сообщение..."></textarea>
+							<span id="contact-message-title-text" class="label-input-form">Сообщение</span>
+							<textarea id="contact-message-input-text" class="input100" name="message" placeholder="Напишите ваше сообщение..."></textarea>
 						</div>
 		
 						<div class="container">
-							<div class="all-news-btn"> <a href="#">Отправить</a> </div>
+							<div class="all-news-btn"> <a id="contact-send-btn-text" href="#">Отправить</a> </div>
 						</div>
 					</form>
 				</div>
@@ -389,6 +389,31 @@
 		</div>
 	</template>
 
+	<template id="newsTitleTemps">
+		<div class="sec-mp-header-logo"> <img src="img/main-page/sec-news/sec_news.png" alt="Section news"> </div> <span id="news-section-text">Новости</span> 
+	</template>
+
+	<template id="activityTitleTemps">
+		<div class="sec-mp-header-logo"> <img src="img/main-page/sec-news/sec_news.png" alt="Section news"> </div> <span id="activity-section-text">Отрасли</span>
+	</template>
+
+	<template id="companyTitleTemps">
+		<div class="sec-mp-header-logo"> <img src="img/main-page/sec-news/sec_news.png" alt="Section news"> </div> <span id="company-section-text">Компании</span> 
+	</template>
+
+	<template id="investTitleTemps">
+		<div class="sec-mp-header-logo"> <img src="img/main-page/sec-news/sec_news.png" alt="Section invest projects"> </div> <span id="invest-section-text">Инвестиционные проекты Республики Таджикистан</span> 
+	</template>
+
+	<template id="businessGuideTitleTemps">
+		<div class="sec-mp-header-logo"> <img src="img/main-page/sec-news/sec_news.png" alt="Section business guide"> </div> <span id="business-section-text">Бизнес путеводитель</span>
+	</template>
+
+	<template id="articleTitleTemps">
+		<div class="sec-mp-header-logo"> <img src="img/main-page/sec-news/sec_news.png" alt="Section articles"> </div> <span id="articles-section-text">Статьи</span>
+	</template>
+
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/localization.js"></script>
 	<script src="js/script.js"></script>

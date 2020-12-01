@@ -45,12 +45,12 @@
 },
 "attrs": [
     {
-        "id": "newslet-email",
+        "id": "newsLetterEmailTextBox",
         "attr": "placeholder",
         "value": "Почтаи худро ворид кунед"
     },
     {
-        "id": "subsBtn",
+        "id": "subscribeToNewLetterButton",
         "attr": "value",
         "value": "Обуна шудан"
     }

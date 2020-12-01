@@ -1,0 +1,28 @@
+{
+    "texts": {
+        "contact-us-title-text": "Связаться с нами",
+        "contact-name-title-text": "Назовите ваше имя *",
+        "email-input-title-text": "Введите ваше email *",
+        "contact-message-title-text": "Сообщение",
+        "contact-send-btn-text" : "Отправить"
+    
+        
+    },
+    "attrs": [
+        {
+            "id": "contact-name-input-text",
+            "attr": "placeholder",
+            "value": "Введите ваше имя"
+        },
+        {
+            "id": "contact-email-input-text",
+            "attr": "placeholder",
+            "value": "Введите ваш email"
+        },
+        {
+            "id": "contact-message-input-text",
+            "attr": "placeholder",
+            "value": "Напишите ваше сообщение..."
+        }
+    ]
+}

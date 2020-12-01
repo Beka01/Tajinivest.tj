@@ -64,7 +64,9 @@
 
     $.get("layoutpage.html", function(footerEl) {
         const templElem = $(footerEl)[27];
-
+        //console.log($(footerEl));
+      
+      
       // footer
         const footerTempEl = templElem.content;
         const footerInHtml = document.importNode(footerTempEl, true);
@@ -96,6 +98,78 @@
         if (document.getElementById('open-modal') == null){
             } else {
                 document.getElementById('open-modal').appendChild(verificationInHtml);
+            }
+    });
+
+    $.get("layoutpage.html", function(newsTitleSectionEl) {
+        const templElem = $(newsTitleSectionEl)[33];
+
+      // footer
+        const newsTitleSectionTempEl = templElem.content;
+        const newsTitleSectionInHtml = document.importNode(newsTitleSectionTempEl, true);
+        if (document.getElementById('news-title-text-box') == null){
+            } else {
+                document.getElementById('news-title-text-box').appendChild(newsTitleSectionInHtml);
+            }
+    });
+
+    $.get("layoutpage.html", function(activityTitleSectionEl) {
+        const templElem = $(activityTitleSectionEl)[35];
+
+      // footer
+        const activityTitleSectionTempEl = templElem.content;
+        const activityTitleSectionInHtml = document.importNode(activityTitleSectionTempEl, true);
+        if (document.getElementById('activity-title-text-box') == null){
+            } else {
+                document.getElementById('activity-title-text-box').appendChild(activityTitleSectionInHtml);
+            }
+    });
+
+    $.get("layoutpage.html", function(companyTitleSectionEl) {
+        const templElem = $(companyTitleSectionEl)[37];
+
+      // footer
+        const companyTitleSectionTempEl = templElem.content;
+        const companyTitleSectionInHtml = document.importNode(companyTitleSectionTempEl, true);
+        if (document.getElementById('company-title-text-box') == null){
+            } else {
+                document.getElementById('company-title-text-box').appendChild(companyTitleSectionInHtml);
+            }
+    });
+
+    $.get("layoutpage.html", function(investTitleSectionEl) {
+        const templElem = $(investTitleSectionEl)[39];
+
+      // footer
+        const investTitleSectionTempEl = templElem.content;
+        const investTitleSectionInHtml = document.importNode(investTitleSectionTempEl, true);
+        if (document.getElementById('invest-title-text-box') == null){
+            } else {
+                document.getElementById('invest-title-text-box').appendChild(investTitleSectionInHtml);
+            }
+    });
+
+    $.get("layoutpage.html", function(businessTitleSectionEl) {
+        const templElem = $(businessTitleSectionEl)[41];
+
+      // footer
+        const businessTitleSectionTempEl = templElem.content;
+        const businessTitleSectionInHtml = document.importNode(businessTitleSectionTempEl, true);
+        if (document.getElementById('business-title-text-box') == null){
+            } else {
+                document.getElementById('business-title-text-box').appendChild(businessTitleSectionInHtml);
+            }
+    });
+
+    $.get("layoutpage.html", function(articleTitleSectionEl) {
+        const templElem = $(articleTitleSectionEl)[43];
+
+      // footer
+        const articleTitleSectionTempEl = templElem.content;
+        const articleTitleSectionInHtml = document.importNode(articleTitleSectionTempEl, true);
+        if (document.getElementById('article-title-text-box') == null){
+            } else {
+                document.getElementById('article-title-text-box').appendChild(articleTitleSectionInHtml);
             }
     });
 

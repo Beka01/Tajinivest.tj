@@ -1,0 +1,28 @@
+{
+    "texts": {
+        "contact-us-title-text": "Contact us",
+        "contact-name-title-text": "Input your name *",
+        "email-input-title-text": "Input your email *",
+        "contact-message-title-text": "Message",
+        "contact-send-btn-text" : "Send"
+    
+        
+    },
+    "attrs": [
+        {
+            "id": "contact-name-input-text",
+            "attr": "placeholder",
+            "value": "Enter your name"
+        },
+        {
+            "id": "contact-email-input-text",
+            "attr": "placeholder",
+            "value": "Enter your email"
+        },
+        {
+            "id": "contact-message-input-text",
+            "attr": "placeholder",
+            "value": "Write your message..."
+        }
+    ]
+}
