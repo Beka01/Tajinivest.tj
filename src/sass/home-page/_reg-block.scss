@@ -27,6 +27,7 @@
     text-transform: uppercase;
     font-size: 14px;
     color: $txt_color_blue;
+    padding: 0 36px;
 }
 
 .registration-btn{
@@ -94,6 +95,9 @@
     .registration-txt-box h5 {
         font-size: 21px;
     }
+    .txt-box-descr{
+        padding: 0 20px;
+    }
 }
 
 
@@ -106,6 +110,7 @@
     }
     .txt-box-descr {
         font-size: 12px;
+        padding: 0 23px;
     }
 }
 
@@ -121,6 +126,7 @@
     }
     .txt-box-descr {
         font-size: 12px;
+        padding: 0 13px;
 
     }
     .registration-search {

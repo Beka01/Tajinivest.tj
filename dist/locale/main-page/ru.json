@@ -1,0 +1,33 @@
+{
+    "texts": {
+        "decision-title": "Решение",
+        "decision-descr": "Ваших бизнес задач",
+    
+        "partnership-title": "Партнерство",
+        "partnership-descr": "Налаживание связей и контактов в один клик",
+    
+        "platform-title": "Площадка",
+        "platform-descr": "Для продажи ваших услуг и товаров",
+    
+        "registration-button": "Регистрация",
+        
+        "all-news-text": "Все новости",
+        "activity-section-text": "Отрасли",
+        "all-categories-text": "Все категории",
+
+        "news-section-text": "Новости",
+        "company-section-text": "Компании",
+        "invest-section-text": "Инвестиционные проекты Республики Таджикистан",
+        "business-section-text": "Бизнес путеводитель",
+        "articles-section-text": "Статьи"
+    
+        
+    },
+    "attrs": [
+        {
+            "id": "search-company",
+            "attr": "placeholder",
+            "value": "Поиск компании и  продуктов..."
+        }
+    ]
+    }

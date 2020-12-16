@@ -1,0 +1,164 @@
+    <form enctype="multipart/form-data" class="modal-reg-wrapper" id="signup-form">
+        <div class="modal-reg-close" id="reg-close-btn">×</div>
+        <div class="modal-reg-header">
+            <h1 data-lang="ru" style="display: none;">Регистрация</h1>
+            <h1 data-lang="en" style="display: none;">Registration</h1>
+            <h1 data-lang="tj" style="display: none;">Бақайдгирӣ</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+               <div class="form-group company_name">
+                   <input data-lang="ru" style="display: none;" name="name" type="text" class="form-control" id="regname-ru" placeholder="Наименование Вашего предприятия">
+                   <input data-lang="en" style="display: none;" name="name" type="text" class="form-control" id="regname-en" placeholder="Name of your company">
+                   <input data-lang="tj" style="display: none;" name="name" type="text" class="form-control" id="regname-tj" placeholder="Номи ширкати шумо">
+               </div>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col">
+               <div class="form-group company_address">
+                   <input data-lang="ru" style="display: none;" name="address" type="text" class="form-control" id="regaddress-ru" placeholder="Адрес">
+                   <input data-lang="en" style="display: none;" name="address" type="text" class="form-control" id="regaddress-en" placeholder="Address">
+                   <input data-lang="tj" style="display: none;" name="address" type="text" class="form-control" id="regaddress-tj" placeholder="Суроға">
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group">
+                   <select name="selectcountry" autocomplete="off" class="form-control country-reg-select" id="regcountry">
+                     <option value="default">--- Выберите страну ---</option>
+                   </select>
+                 </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group">
+                   <select name="city" autocomplete="off" class="form-control city-reg-select " id="city-select" style="display: none;">
+                   </select>
+                   <input name="cityinput" type="text" class="form-control " id="city-input" placeholder="Укажите город" style="display: none;">
+                   <label style="display: none;" class="error"></label>
+                 </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="modal-reg-textarea">
+                <div class="form-group company_description">
+                    <textarea data-lang="ru" style="display: none;" class="form-control text-area-style" id="regcompdescr-ru" rows="5" placeholder="При описание используйте ключевые слова, которые характерны именно вашему виду деятельности, чтобы потенциальные клиенты, ищущие товары или услуги, нашли вашу компанию."></textarea>
+                    <textarea data-lang="en" style="display: none;" class="form-control text-area-style" id="regcompdescr-en" rows="5" placeholder="Use keywords for description   that are specific to your type of activity so that potential customers looking for products or services find your company."></textarea>
+                    <textarea data-lang="tj" style="display: none;" class="form-control text-area-style" id="regcompdescr-tj" rows="5" placeholder="Ҳангоми пур кардани сатри зерин, аз калимаҳои калидие истифода намоед, ки ба самти фаолияти шумо нигаронида шудаанд, то ин ки мизоҷон ҳангоми ҷустучӯ, маҳсулот ва ё хизматрасонии ширкати шуморо дарёфт намоянд."></textarea>
+                </div>
+                <div class="form-group row">
+                    <div style="display: none;" class="col-md-6" id="chbox-tj">
+                       <div  class="check-box-css">
+                            <label>
+                               <input class="g-mr-5 chbx" name="allow-tj" type="checkbox"><span id="trans-tajik">Разрешить перевод на таджикский</span> 
+                            </label>
+                        </div>
+                    </div>
+                    <div style="display: none;" class="col-md-6" id="chbox-ru">
+                       <div  class="check-box-css">
+                           <label >
+                               <input class="g-mr-5 chbx" name="allow-ru" type="checkbox"><span id="trans-russia">Разрешить перевод на русский</span> 
+                            </label>
+                        </div>
+                    </div>
+                    <div style="display: none;" class="col-md-6" id="chbox-en">
+                       <div  class="check-box-css">
+                           <label >
+                               <input class="g-mr-5 chbx" name="allow-en" type="checkbox"><span id="trans-english">Разрешить перевод на английский</span> 
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-6">
+               <div class="form-group">
+                   <select name="selectarea" class="form-control sectors-reg" id="regcomparea">
+                    
+                   </select>
+                 </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group  icon-in">
+                       <input type="text" class="form-control reg-input" id="regcompweb" placeholder="www.mysite.tj">
+                       <i class="fa fa-globe input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group icon-in">
+                    <input type="text" class="form-control reg-input" id="regcompinsta" placeholder="Инстаграм">
+                    <i class="fa fa-instagram input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group icon-in">
+                    <input type="text" class="form-control reg-input" id="regcompfacebook" placeholder="Фейсбук">
+                    <i class="fa fa-facebook-official input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="input-group">
+                    <input class="input-tel-reg" type="tel" id="phone">
+                </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="input-group upload-file-style">
+                    <input type="file" class="input-logo-file" id="logo_file" accept="image/*" name="logo_file" value="Upload file" title="Load my file" >
+                    <label style="display: none;" class="error"></label>
+                </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group icon-in">
+                    <input type="phone" class="form-control reg-input" id="regcompfax" placeholder="Факс">
+                    <i class="fa fa-fax input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group icon-in">
+                    <input name="phone" type="phone" class="form-control reg-input" id="regcompphone" placeholder="Рабочий телефон">
+                    <i class="fa fa-phone input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group icon-in">
+                    <input type="text" name="contactperson" class="form-control reg-input" id="regcontname" placeholder="ФИО контактного лица">
+                    <i class="fa fa-user input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group icon-in">
+                    <input name="email" type="text" class="form-control reg-input" id="regcompemail" placeholder="Почта">
+                    <i class="fa fa-envelope input-icon" aria-hidden="true"></i>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group">
+                   <input name="password" type="password" autocomplete="password" class="form-control" id="regcomppass" placeholder="Пароль">
+               </div>
+           </div>
+           <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group">
+                   <input name="repassword" type="password" autocomplete="password" class="form-control" id="regconfpass" placeholder="Подтвердите пароль">
+               </div>
+           </div>
+        </div>
+        <div class="captcha-reg">
+            <input class="modal-reg-btn g-recaptcha" data-sitekey="6LckZQcaAAAAAIwK6e-BDLCri0gNONEuVrN0CuAo" 
+            data-callback='onSubmit' data-action='submit' id="regBtnSubmit" type="submit" name="submit" value="Отправить"/>
+        </div>
+    </form>

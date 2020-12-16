@@ -15,7 +15,7 @@ body, html {
   width:700px;
   margin: auto;
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -24,7 +24,8 @@ body, html {
   height: 150px;
   width: 300px;
   margin: auto;
-  padding-bottom: 10px;
+  margin-bottom: 50px;
+  
   img {
     width: 100%;
     height: 100%;
@@ -32,11 +33,13 @@ body, html {
   }
 }
 .lang-opt {
+  width:100%;
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
 .lang-icon {
+  
   padding: 20px;
   cursor: pointer;
  
@@ -49,6 +52,147 @@ body, html {
     &:hover{
       text-decoration: none;
     }
+    
   }
   
+}
+
+@media (max-width: 1199px){
+  .content-wrapper{
+    width:650px;
+  }
+  .logo-main {
+    height: 125px;
+    width: 265px;
+    
+  }
+  .lang-icon {
+    padding: 25px;
+    span{
+    
+      font-size: 24px;
+    }
+    a{
+      img{
+        width: 88px;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 991px){
+  .content-wrapper{
+    width:600px;
+  }
+  .logo-main {
+    height: 100;
+    width: 250px;
+    
+  }
+  .lang-icon {
+    padding: 20px;
+    span{
+      
+      font-size: 22px;
+    }
+    a{
+      img{
+        width: 82px;
+      }
+    }
+    
+  }
+ 
+}
+
+@media (max-width: 767px) {
+ 
+  .content-wrapper{
+    width:550px;
+  }
+  .logo-main {
+    height: 125px;
+    width: 250px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .lang-icon {
+    padding: 20px;
+    span{
+      
+      font-size: 22px;
+    }
+    a{
+      img{
+        width: 82px;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 575px){
+  .content-wrapper{
+    width:450px;
+  }
+  .logo-main {
+    height: 100px;
+    width: 200px;
+    
+  }
+  .lang-icon {
+    padding: 20px;
+    span{
+      
+      font-size: 20px;
+    }
+    a{
+      img{
+        width: 72px;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 375px){
+  .content-wrapper{
+    width:400px;
+  }
+  .logo-main {
+    height: 85px;
+    width: 180px;
+    
+  }
+  .lang-icon {
+    padding: 20px;
+    
+    span{
+      display: block;
+      font-size: 20px;
+    }
+    a{
+      
+      img{
+        width: 72px;
+        
+      }
+    }
+    
+  }
+  .lang-opt {
+   
+    display: block;
+   
+  }
+  .logo-main {
+   
+    margin-top: 80px;
+    margin-bottom: 35px;
+   
+  }
 }

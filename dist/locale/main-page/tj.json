@@ -1,0 +1,33 @@
+{
+    "texts": {
+        "decision-title": "Ҳалли",
+        "decision-descr": "Масъалаҳои тиҷоратии шумо",
+    
+        "partnership-title": "Бароҳмонии",
+        "partnership-descr": "Ҳамкорӣ бо пахши як тугма",
+    
+        "platform-title": "Платформа",
+        "platform-descr": "Барои фурӯши мол ва хизматрасониҳои шумо",
+    
+        "registration-button": "Бақайдгирӣ",
+        
+        "all-news-text": "Ҳама хабарҳо",
+        "activity-section-text": "Самтҳои фаъолият",
+        "all-categories-text": "Ҳамаи самтҳо",
+
+        "news-section-text": "Хабарҳо",
+        "company-section-text": "Ширкатҳо",
+        "invest-section-text": "Лоиҳаҳои сармоягузорӣ дар Ҷумҳурии Тоҷикистон",
+        "business-section-text": "Роҳнамои тиҷоратӣ",
+        "articles-section-text": "Мақолаҳо"
+    
+        
+    },
+    "attrs": [
+        {
+            "id": "search-company",
+            "attr": "placeholder",
+            "value": "Ҷустуҷӯи ширкатҳо ва маҳсулотҳо..."
+        }
+    ]
+    }

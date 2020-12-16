@@ -1,0 +1,69 @@
+.logo-loading{
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 100px;
+  //background-color: #396284;
+  margin: auto;
+  margin-top: 150px;
+  border-radius: 3px;
+  //padding-top: 00px;
+  img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+  }
+}
+
+.svg-wrapper{
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 258px;
+  height: 258px;
+  margin-top: 100px;
+}
+
+.loader-wrapper{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 1) ;   //opacity: 0.8;
+    z-index: 5;
+}
+svg {
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.tree {
+  fill: #396284;
+}
+
+.circle-mask {
+  transform-origin: 50% 90%;
+  animation: scale 5s infinite ease-out;
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(0.0);
+  }
+  7%, 90% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(1);
+  }
+}

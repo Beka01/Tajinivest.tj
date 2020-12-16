@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function(){
-
+  
   // NAV UNDERLINE
     let underlineMenuItems = document.querySelectorAll(".menu-mp .menu-mp-link");
     let nav = document.querySelector("nav");
@@ -259,45 +259,11 @@ $(document).ready(function(){
             $(".pagi-comps li.page-item:eq(" + (currentPage - 1) + ")").addClass('active');
         }
     });
-	let input = document.querySelector("#phone");
-	  window.intlTelInput(input, {
-		// allowDropdown: false,
-		// autoHideDialCode: false,
-		// autoPlaceholder: "off",
-		// dropdownContainer: document.body,
-		// excludeCountries: ["us"],
-        // formatOnDisplay: false,
-        
-        // geoIpLookup: function(callback) {
-        //     $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-        //   var countryCode = (resp && resp.country) ? resp.country : "";
-        //   callback(countryCode);
-        //     });
-        //   },
-        
-		// hiddenInput: "full_number",
-		//initialCountry: "auto", 
-		// localizedCountries: { 'ru': 'Russia' },
-		// nationalMode: false,
-		// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-		// placeholderNumberType: "MOBILE",
-		// preferredCountries: ['cn', 'jp'],
-		// separateDialCode: true,
-		utilsScript: "js/phone-script/utils.js",
-      });
-    
-      $('[data-modal=compreg]').on('click', () => {
-        $('.overlay-reg, #regcompform').fadeIn('slow');
-      });
-
-      //Close btn block
-    $('.modal-reg-close').on('click', () => {
-        $('.overlay-reg, #regcompform').fadeOut('fast');
-        $(this).find('.modal-reg-wrapper').trigger('reset');
-        //$(this).find('label.error').hide();
-        $(".error").removeClass("error");
-    }); 
+    console.log("DOM ready");
+    //$(".loader-wrapper").remove();
+	
 });
+
 
 
 

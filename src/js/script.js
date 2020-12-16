@@ -1,6 +1,7 @@
 "use strict";
 
 $(document).ready(function(){
+  
   // NAV UNDERLINE
     let underlineMenuItems = document.querySelectorAll(".menu-mp .menu-mp-link");
     let nav = document.querySelector("nav");
@@ -258,8 +259,8 @@ $(document).ready(function(){
             $(".pagi-comps li.page-item:eq(" + (currentPage - 1) + ")").addClass('active');
         }
     });
-
-    //var headerHtml = document.getElementById('header-temp');
+    console.log("DOM ready");
+    //$(".loader-wrapper").remove();
 	
 });
 

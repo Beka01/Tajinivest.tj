@@ -1,0 +1,14 @@
+{
+    "name": {
+        "required": {
+            "ru": "Вы не указали название вашей компании",
+            "en": "You have not provided your company name",
+            "tj": "Шумо номи ширкати худро ворид накардед"
+        },
+        "minlength": {
+            "ru": "Название компании должно быть не меньше двух символов",
+            "en": "Company name must be at least two characters",
+            "tj": "Номи ширкат бояд на камтар аз ду аломат бошад"
+        }
+    }
+}

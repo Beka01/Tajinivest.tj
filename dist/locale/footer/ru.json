@@ -1,0 +1,59 @@
+{
+"links":
+[
+    {
+        "url":"main.html",
+        "name":"Главная"
+    },
+
+    {
+        "url":"news.html",
+        "name":"Новости"
+    },
+
+    {
+        "url":"companies.html",
+        "name":"Компании"
+    },
+
+    {
+        "url":"contacts.html",
+        "name":"Контакты"
+    },
+    
+    {
+        "url":"faq.html",
+        "name":"ЧАВО"
+    },
+
+    {
+        "url":"about.html",
+        "name":"О площадке B2B"
+    },
+    
+    {
+        "url":"terms.html",
+        "name":"Правила пользования"
+    }
+],
+"texts": {
+    "subs-text": "Подписки",
+    "ftitle": "О портале B2B",
+    "ftitlemap": "Карта сайта",
+    "fnewssubs": "Новостная Рассылка",
+    "newssubsdescr": "Подпишитесь на нашу рассылку чтобы вы могли получать свежие новости от портала B2B",
+    "subsBtn": "Подписаться"    
+},
+"attrs": [
+    {
+        "id": "newsLetterEmailTextBox",
+        "attr": "placeholder",
+        "value": "Введите ваш email"
+    },
+    {
+        "id": "subscribeToNewLetterButton",
+        "attr": "value",
+        "value": "Подписаться"
+    }
+]
+}

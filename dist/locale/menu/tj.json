@@ -1,0 +1,43 @@
+{
+    "links":
+[
+    {
+        "url":"main.html",
+        "name":"Асосӣ"
+    },
+
+    {
+        "url":"news.html",
+        "name":"Хабарҳо"
+    },
+
+    {
+        "url":"companies.html",
+        "name":"Ширкатҳо"
+    },
+
+    {
+        "url":"investmentprojects.html",
+        "name":"ЛОИҲАҲОИ САРМОЯГУЗОРӢ"
+    },
+
+    {
+        "url":"businessguide.html",
+        "name":"Роҳнамои тиҷоратӣ"
+    },
+
+    {
+        "url":"articles.html",
+        "name":"Мақолаҳо"
+    },
+
+    {
+        "url":"contacts.html",
+        "name":"Тамос"
+    }
+],
+"texts": {
+    "logintop": "Воридшавӣ",
+    "signuptop": "Бақайдгирӣ"
+}
+}

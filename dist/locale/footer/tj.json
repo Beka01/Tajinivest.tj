@@ -1,0 +1,58 @@
+{
+    "links":
+[
+    {
+        "url":"main.html",
+        "name":"Асосӣ"
+    },
+
+    {
+        "url":"news.html",
+        "name":"Хабарҳо"
+    },
+
+    {
+        "url":"companies.html",
+        "name":"Ширкатҳо"
+    },
+
+    {
+        "url":"contacts.html",
+        "name":"Тамос"
+    },
+    
+    {
+        "url":"faq.html",
+        "name":"Саволҳо"
+    },
+
+    {
+        "url":"about.html",
+        "name":"Майдони B2B"
+    },
+    
+    {
+        "url":"terms.html",
+        "name":"Қоидаҳои майдони В2В"
+    }
+],
+"texts": {
+    "subs-text": "Обуна",
+    "ftitle": "Майдони B2B",
+    "ftitlemap": "Харитаи сайт",
+    "fnewssubs": "Ахборот",
+    "newssubsdescr": "Ба номаи мо обуна шавед ва шумо метавонед хабарҳои навро аз портали B2B дастрас кунед"
+},
+"attrs": [
+    {
+        "id": "newsLetterEmailTextBox",
+        "attr": "placeholder",
+        "value": "Почтаи худро ворид кунед"
+    },
+    {
+        "id": "subscribeToNewLetterButton",
+        "attr": "value",
+        "value": "Обуна шудан"
+    }
+]
+}

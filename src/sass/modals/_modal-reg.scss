@@ -174,7 +174,7 @@
   visibility: hidden;
 }
 .input-logo-file::before {
-  content: 'Attach logo';
+  content: attr(title);
   display: inline-block;
   background: $search_btn_color;
   padding: 6px 8px;
