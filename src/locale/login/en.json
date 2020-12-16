@@ -1,0 +1,24 @@
+{
+"texts": {
+    "login-title-text" : "Member Login",
+    "forgot-pass-login" : "Forgot Password?",
+    "login-btn-text" :"Login"
+},
+"attrs": [
+    {
+        "id": "user-name-login",
+        "attr": "placeholder",
+        "value": "Email"
+    },
+    {
+        "id": "pass-input-login",
+        "attr": "placeholder",
+        "value": "Password"
+    },
+    {
+        "id": "login-btn-text",
+        "attr": "value",
+        "value": "Login"
+    }
+]
+}

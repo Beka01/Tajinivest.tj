@@ -272,7 +272,6 @@ $(document).ready(function () {
     separateDialCode: true,
     utilsScript: "../js/phone-script/utils.js",
   });
-
   // REGISTRATION FORM VALIDATOR
   loadValidationMessages('#regcompform form');
   

@@ -1,0 +1,23 @@
+{
+    "texts": {
+        "login-title-text" : "Воридшавӣ",
+        "forgot-pass-login" : "Рамзро фаромуш кардед?"
+    },
+    "attrs": [
+        {
+            "id": "user-name-login",
+            "attr": "placeholder",
+            "value": "Почтаи электронӣ"
+        },
+        {
+            "id": "pass-input-login",
+            "attr": "placeholder",
+            "value": "Рамз"
+        },
+        {
+            "id": "login-btn-text",
+            "attr": "value",
+            "value": "Воридшавӣ"
+        }
+    ]
+    }

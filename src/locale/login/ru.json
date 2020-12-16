@@ -1,0 +1,23 @@
+{
+    "texts": {
+        "login-title-text" : "Вход",
+        "forgot-pass-login" : "Забыли пароль?"
+    },
+    "attrs": [
+        {
+            "id": "user-name-login",
+            "attr": "placeholder",
+            "value": "Электронная почта"
+        },
+        {
+            "id": "pass-input-login",
+            "attr": "placeholder",
+            "value": "Пароль"
+        },
+        {
+            "id": "login-btn-text",
+            "attr": "value",
+            "value": "Войти"
+        }
+    ]
+    }

@@ -14,6 +14,7 @@
    loadTemplates('layouts/header-invest.html', 'invest-title-text-box');
    loadTemplates('layouts/header-business.html', 'business-title-text-box');
    loadTemplates('layouts/header-article.html', 'article-title-text-box');
+   loadTemplates('layouts/login.html', 'login-wrapper');
 
     function loadTemplates(url, id){
         window.lm.start("layouts: " + url);

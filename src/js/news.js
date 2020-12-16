@@ -19,7 +19,7 @@ function loadNews(){
             };
             let news = doc.data();
             
-            console.debug(news);
+            //console.debug(news);
             if(news['title_' + currentLocale].length > 0){
                 counterNews++;
                 const date = news['date'].toDate();

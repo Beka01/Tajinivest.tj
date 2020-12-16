@@ -38,6 +38,15 @@ function localize(){
         });
     });
 
+    //LOGIN
+    $.get('locale/login/' + currentLocale + '.json', function(ans){
+        locLoginJson(ans);
+    }).fail( function (){
+        $.get('locale/login/' + DEFAULT_LOCALE + '.json', function(ans){
+            locLogin(ans);
+        });
+    });
+
     //MAIN-PAGE
     $.get('locale/main-page/' + currentLocale + '.json', function(ans){
         localizeMainPage(ans);
@@ -131,6 +140,15 @@ function locRegJson(registration){
     }
 }
 
+// REGISTRATION LOCALIZATION
+function locLoginJson(login){
+    for (let t of login.attrs){
+        $('#' + t.id).attr(t.attr, t.value);
+    }
+    for (let t in login.texts){
+        $('#' + t).html(login.texts[t]);
+    }
+}
 // MAIN-PAGE BODY
 function localizeMainPage(main){
     // for (let m of main.links){
